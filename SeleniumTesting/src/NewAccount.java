@@ -24,6 +24,7 @@ public class NewAccount {
 	    String curAddress = "52 Purok 4";
 	    String browser = "GOOGLE"; 
 	    String browser1 = "firefox";
+	    String gender = "Female";
 	    WebDriver driver;
 	    
 	    driver = utilities.DriverFactory.open(browser);
@@ -31,14 +32,25 @@ public class NewAccount {
 		 //WebDriver driver = new FirefoxDriver();	
 	       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	       driver.get("https://demoqa.com/automation-practice-form");
+	      
 	       
 	       driver.manage().window().maximize();
 	       
 	       driver.findElement(By.id("firstName")).sendKeys(fName);
 	       driver.findElement(By.id("lastName")).sendKeys(lName);
 	       driver.findElement(By.id("userEmail")).sendKeys(uName);
-	       driver.findElement(By.xpath("//label[@for='gender-radio-2']")).click();
-	       driver.findElement(By.id("userNumber")).sendKeys(uNumber);
+	       WebElement femaleRad = driver.findElement(By.xpath("//label[@for='gender-radio-2']"));
+	       WebElement maleRad = driver.findElement(By.xpath("//label[@for='gender-radio-1']"));
+	     
+	       if(gender.equalsIgnoreCase("female")) {
+	    	   femaleRad.click();
+	       }else {
+	    	   maleRad.click();
+	       }
+	       
+	       WebElement userNo = driver.findElement(By.id("userNumber"));
+	       userNo.sendKeys(uNumber);
+
 	     
 	       
 	       wait.until(ExpectedConditions.elementToBeClickable(By.id("dateOfBirthInput")));
@@ -77,14 +89,18 @@ public class NewAccount {
 	       
 	       driver.findElement(By.id("submit")).click();
 	       
-	       try {
-	           Thread.sleep(5000); // Pause for 2 seconds to wait for the page to load
-	       } catch (InterruptedException e) {
-	           e.printStackTrace();
+	       
+	       String conf = driver.findElement(By.id("example-modal-sizes-title-lg")).getText();
+	       String message = "Thanks for submitting the form";
+	       
+	       if(conf.equalsIgnoreCase(message)) {
+	    	   System.out.println("Successfully Registered");
+	       }else {
+	    	   System.out.println("Failed");
 	       }
 	       
-	       driver.findElement(By.id("closeLargeModal")).click();
 	       
+
 	       
 	       try {
 	           Thread.sleep(10000); // Pause for 2 seconds to wait for the page to load
@@ -114,7 +130,7 @@ public class NewAccount {
 
 
 	        //System.out.println("Sucessfully Created Account: " + "Redirected To Add User: " + element);
-	      driver.quit();
+	
 
 
 	}

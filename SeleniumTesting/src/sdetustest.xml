@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Login Page">
+
+  <test name="Smoke Test: Home Page">
+    <classes>
+      <class name="SmokeTesting.ATagsTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="Smoke Test: Login Page">
+    <classes>
+      <class name = "SmokeTesting.LoginPresentTestNG" />
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+</suite> <!-- Suite -->
