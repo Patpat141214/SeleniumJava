@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Philhealth Field Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="TestPhilhealthField(failed)">
+    <classes>
+      <class name="UnitTesting.PhilHealth_Field">
+        <methods>
+          <include name="Url"/>
+          <include name="closeBrowser"/>
+          <include name="Claim"/>
+        </methods>
+      </class> <!-- UnitTesting.PhilHealth_Field -->
+    </classes>
+  </test> <!-- TestPhilhealthField(failed) -->
+</suite> <!-- Failed suite [Philhealth Field Test] -->

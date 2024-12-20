@@ -6,6 +6,7 @@
       <class name="SmokeTesting.LoginPresentTestNG">
         <methods>
           <include name="loginElementPresentTest"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- SmokeTesting.LoginPresentTestNG -->
     </classes>
