@@ -1,36 +1,39 @@
 trigger:
-- main
+- main  # Replace with your branch name if not `main`
 
 pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  GITHUB_TOKEN: $(GITHUB_TOKEN)
+  # Use the Library Group to define your GitHub token securely
+  - group: GitHubSecrets
 
 steps:
+# Step 1: Connect to the VPN
+- script: |
+    echo "Connecting to Sophos VPN..."
+    sophosvpn connect --server "125.5.210.68" --user "pfeniza" --password "gj&cA7Hsek"
+    echo "VPN connected successfully."
+  displayName: "Connect to VPN"
+
+# Step 2: Checkout the code
 - checkout: self
   clean: true
+  displayName: "Checkout Code"
 
-# Install Chrome and dependencies for headless mode
+# Step 3: Run Maven Tests
 - script: |
-    sudo apt-get update
-    sudo apt-get install -y wget curl unzip
-    sudo apt-get install -y libxss1 libappindicator3-1 libindicator7
-    sudo apt-get install -y fonts-liberation
-    sudo apt-get install -y libnss3 libgdk-pixbuf2.0-0 libasound2
-    sudo apt-get install -y libnspr4 libx11-xcb1
-    sudo apt-get install -y google-chrome-stable
-  displayName: 'Install Chrome dependencies'
-
-- script: |
-    echo Authenticating to GitHub
+    echo "Authenticating GitHub..."
     git config --global url.https://$(GITHUB_TOKEN)@github.com/.insteadOf https://github.com/
-    echo Navigate to the Maven project folder
-    cd CucumberJavaProjectWithSeleniumAndTestNG # Replace with the folder containing your pom.xml
-    echo Run Maven Tests with -e switch
-    mvn clean test -e
-  displayName: "Run Maven Tests with -e switch"
 
+    echo "Navigating to Maven project folder..."
+    cd CucumberJavaProjectWithSeleniumAndTestNG
+
+    echo "Running Maven Tests..."
+    mvn clean test -e
+  displayName: "Run Maven Tests"
+
+# Step 4: Publish Surefire Reports as Artifacts
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.SourcesDirectory)/CucumberJavaProjectWithSeleniumAndTestNG/target/surefire-reports'
