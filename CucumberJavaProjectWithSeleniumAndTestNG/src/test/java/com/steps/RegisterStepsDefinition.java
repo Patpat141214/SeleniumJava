@@ -38,7 +38,7 @@ public class RegisterStepsDefinition {
 	    WebElement LName = driver.findElement(By.id("lastName"));
 	    LName.sendKeys("Fenacaszx");
 	    WebElement email = driver.findElement(By.id("email"));
-	    email.sendKeys("as82hn65002688g23hhJs@gmail.com");
+	    email.sendKeys("as82hn65002688g223hhJs@gmail.com");
 	    WebElement pass = driver.findElement(By.id("password"));
 	    pass.sendKeys("123123123");
 	    
