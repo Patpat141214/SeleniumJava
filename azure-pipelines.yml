@@ -1,0 +1,21 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: GitHubSecrets  # Reference the GitHubSecrets variable group
+
+steps:
+- checkout: self
+  clean: true
+
+- script: |
+    echo Authenticating to GitHub
+    git config --global url.https://$(GITHUB_TOKEN)@github.com/.insteadOf https://github.com/
+    echo Navigate to the Maven project folder
+    cd CucumberJavaProjectWithSeleniumAndTestNG
+    echo Run Maven Tests
+    mvn clean test
+  displayName: "Run Maven Tests"
