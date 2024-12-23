@@ -5,22 +5,32 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: GitHubSecrets # This refers to the variable group containing GITHUB_TOKEN
+  GITHUB_TOKEN: $(GITHUB_TOKEN)
 
 steps:
 - checkout: self
   clean: true
+
+# Install Chrome and dependencies for headless mode
+- script: |
+    sudo apt-get update
+    sudo apt-get install -y wget curl unzip
+    sudo apt-get install -y libxss1 libappindicator3-1 libindicator7
+    sudo apt-get install -y fonts-liberation
+    sudo apt-get install -y libnss3 libgdk-pixbuf2.0-0 libasound2
+    sudo apt-get install -y libnspr4 libx11-xcb1
+    sudo apt-get install -y google-chrome-stable
+  displayName: 'Install Chrome dependencies'
 
 - script: |
     echo Authenticating to GitHub
     git config --global url.https://$(GITHUB_TOKEN)@github.com/.insteadOf https://github.com/
     echo Navigate to the Maven project folder
     cd CucumberJavaProjectWithSeleniumAndTestNG # Replace with the folder containing your pom.xml
-    echo Run Maven Tests with full error stack trace
+    echo Run Maven Tests with -e switch
     mvn clean test -e
   displayName: "Run Maven Tests with -e switch"
 
-# Publish Surefire reports as build artifacts
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.SourcesDirectory)/CucumberJavaProjectWithSeleniumAndTestNG/target/surefire-reports'
