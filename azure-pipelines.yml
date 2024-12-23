@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: GitHubSecrets  # Reference the GitHubSecrets variable group
+  GITHUB_TOKEN: $(GITHUB_TOKEN) # Add this variable in Azure DevOps Library
 
 steps:
 - checkout: self
@@ -15,7 +15,15 @@ steps:
     echo Authenticating to GitHub
     git config --global url.https://$(GITHUB_TOKEN)@github.com/.insteadOf https://github.com/
     echo Navigate to the Maven project folder
-    cd CucumberJavaProjectWithSeleniumAndTestNG
+    cd CucumberJavaProjectWithSeleniumAndTestNG # Replace with the folder containing your pom.xml
     echo Run Maven Tests
     mvn clean test
   displayName: "Run Maven Tests"
+
+# Publish Surefire reports as build artifacts
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.SourcesDirectory)/CucumberJavaProjectWithSeleniumAndTestNG/target/surefire-reports'
+    artifactName: 'surefire-reports'
+    publishLocation: 'Container'
+  displayName: "Publish Surefire Reports"
