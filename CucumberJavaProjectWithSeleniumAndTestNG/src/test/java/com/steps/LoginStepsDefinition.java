@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 
 public class LoginStepsDefinition {
 	WebDriver driver;
-	String webUrl = "http://172.30.1.26/Published_eSOA4";
+	String webUrl = "https://manager.easyclaimsph.com/Account/Login?ReturnUrl=%2F";
 	
 
 	@Test
@@ -34,8 +34,8 @@ public class LoginStepsDefinition {
 	public void user_enters_valid_username_and_password() {
 		
 		Reporter.log("Entering valid credential", true);
-		driver.findElement(By.id("Username")).sendKeys("patche@admin");
-		driver.findElement(By.id("Password")).sendKeys("123123123");
+		driver.findElement(By.id("Username")).sendKeys("patche1214");
+		driver.findElement(By.id("Password")).sendKeys("P@ssw0rd");
 
 	}
 	@Test
@@ -52,15 +52,15 @@ public class LoginStepsDefinition {
 		
 		Reporter.log("Proceeding to Connect Page", true);
 	
-		WebElement labelCon = driver.findElement(By.xpath("//div[@class='content-header' and text()='Connect']"));
+		WebElement labelCon = driver.findElement(By.xpath("//div[@class='content-header' and text()='Home Page']"));
 		try {
 			if (labelCon.isDisplayed()) {
-				Assert.assertTrue(labelCon.isDisplayed(),"Connect Label is visible");
+				Assert.assertTrue(labelCon.isDisplayed(),"Home Page Label is visible");
 				
 			}
 			else {
-				Assert.assertFalse(labelCon.isDisplayed(), "Connect Label is not Visible");
-				Assert.fail("Connect Label is not Visible");
+				Assert.assertFalse(labelCon.isDisplayed(), "Home Page Label is not Visible");
+				Assert.fail("Home Page Label is not Visible");
 			}
 			
 		}catch (Exception e) {

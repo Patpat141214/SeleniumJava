@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Proceed to Login Page]]>
@@ -16,36 +16,27 @@
     <line>
       <![CDATA[Closing the browser]]>
     </line>
-    <line>
-      <![CDATA[Proceed to URL]]>
-    </line>
-    <line>
-      <![CDATA[Inputting Valid Credential]]>
-    </line>
-    <line>
-      <![CDATA[Click Submit Button]]>
-    </line>
   </reporter-output>
-  <suite started-at="2024-12-23T10:03:28 GMT+08:00" name="Testing" finished-at="2024-12-23T10:03:52 GMT+08:00" duration-ms="24406">
+  <suite started-at="2024-12-23T10:36:56 GMT+08:00" name="Default suite" finished-at="2024-12-23T10:36:59 GMT+08:00" duration-ms="3649">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@7dc0f706]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@4e50c791]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-12-23T10:03:28 GMT+08:00" name="Login Test" finished-at="2024-12-23T10:03:52 GMT+08:00" duration-ms="24406">
+    <test started-at="2024-12-23T10:36:56 GMT+08:00" name="Default test" finished-at="2024-12-23T10:36:59 GMT+08:00" duration-ms="3649">
       <class name="com.runner.TestNgRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestNgRunner@7dc0f706]" started-at="2024-12-23T10:03:28 GMT+08:00" name="setUpClass" finished-at="2024-12-23T10:03:28 GMT+08:00" duration-ms="437" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestNgRunner@4e50c791]" started-at="2024-12-23T10:36:56 GMT+08:00" name="setUpClass" finished-at="2024-12-23T10:36:56 GMT+08:00" duration-ms="435" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@33d53216]]>
+                <![CDATA[org.testng.TestRunner@66153688]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@7dc0f706]" started-at="2024-12-23T10:03:28 GMT+08:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-23T10:03:48 GMT+08:00" duration-ms="19647" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@4e50c791]" started-at="2024-12-23T10:36:56 GMT+08:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-23T10:36:59 GMT+08:00" duration-ms="3164" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -76,36 +67,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@7dc0f706]" started-at="2024-12-23T10:03:48 GMT+08:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-23T10:03:52 GMT+08:00" duration-ms="4264" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Successful registration"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Registration"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Proceed to URL]]>
-            </line>
-            <line>
-              <![CDATA[Inputting Valid Credential]]>
-            </line>
-            <line>
-              <![CDATA[Click Submit Button]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@7dc0f706]" started-at="2024-12-23T10:03:52 GMT+08:00" name="tearDownClass" finished-at="2024-12-23T10:03:52 GMT+08:00" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@4e50c791]" started-at="2024-12-23T10:36:59 GMT+08:00" name="tearDownClass" finished-at="2024-12-23T10:36:59 GMT+08:00" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.runner.TestNgRunner -->
-    </test> <!-- Login Test -->
-  </suite> <!-- Testing -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
