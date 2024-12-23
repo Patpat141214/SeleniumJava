@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  GITHUB_TOKEN: $(GITHUB_TOKEN) # Add this variable in Azure DevOps Library
+- group: GitHubSecrets # Add this variable in Azure DevOps Library
 
 steps:
 - checkout: self
