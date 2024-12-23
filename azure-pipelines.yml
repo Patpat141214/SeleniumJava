@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: GitHubSecrets # Add this variable in Azure DevOps Library
+- group: GitHubSecrets # This refers to the variable group containing GITHUB_TOKEN
 
 steps:
 - checkout: self
@@ -19,3 +19,11 @@ steps:
     echo Run Maven Tests with full error stack trace
     mvn clean test -e
   displayName: "Run Maven Tests with -e switch"
+
+# Publish Surefire reports as build artifacts
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.SourcesDirectory)/CucumberJavaProjectWithSeleniumAndTestNG/target/surefire-reports'
+    artifactName: 'surefire-reports'
+    publishLocation: 'Container'
+  displayName: "Publish Surefire Reports"
