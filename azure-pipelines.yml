@@ -20,10 +20,3 @@ steps:
     mvn clean test
   displayName: "Run Maven Tests"
 
-# Publish Surefire reports as build artifacts
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: '$(Build.SourcesDirectory)/CucumberJavaProjectWithSeleniumAndTestNG/target/surefire-reports'
-    artifactName: 'surefire-reports'
-    publishLocation: 'Container'
-  displayName: "Publish Surefire Reports"
