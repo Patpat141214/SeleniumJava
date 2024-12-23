@@ -37,18 +37,4 @@
 
 </dependencies>
 
- <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version> <!-- You can use any compatible version -->
-        <configuration>
-          <source>1.8</source> <!-- Use 1.8 or later depending on your Java version -->
-          <target>1.8</target> <!-- Use 1.8 or later depending on your Java version -->
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
 </project>
