@@ -16,7 +16,6 @@ steps:
     git config --global url.https://$(GITHUB_TOKEN)@github.com/.insteadOf https://github.com/
     echo Navigate to the Maven project folder
     cd CucumberJavaProjectWithSeleniumAndTestNG # Replace with the folder containing your pom.xml
-    echo Run Maven Tests
-    mvn clean test
-  displayName: "Run Maven Tests"
-
+    echo Run Maven Tests with full error stack trace
+    mvn clean test -e
+  displayName: "Run Maven Tests with -e switch"
