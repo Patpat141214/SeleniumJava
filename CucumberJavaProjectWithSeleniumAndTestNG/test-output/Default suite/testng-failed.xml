@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.runner.TestNgRunner">
+      <class name="com.steps.ddtTestingLogin">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
+          <include name="i_verify_the_login_results"/>
         </methods>
-      </class> <!-- com.runner.TestNgRunner -->
+      </class> <!-- com.steps.ddtTestingLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

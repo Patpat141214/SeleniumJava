@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,7 +19,7 @@ public class RegisterStepsDefinition {
 	WebDriver driver;
 	String url  = "https://thinking-tester-contact-list.herokuapp.com/addUser";
 
-	
+	@Test
 	@Given("I am on the registration page")
 	public void i_am_on_the_registration_page() {
 	    Reporter.log("Proceed to URL", true);
@@ -28,7 +29,7 @@ public class RegisterStepsDefinition {
 	    driver.manage().window().maximize();
 	    	    
 	}
-
+	@Test
 	@When("I fill in valid details")
 	public void i_fill_in_valid_details() {
 		
@@ -38,14 +39,14 @@ public class RegisterStepsDefinition {
 	    WebElement LName = driver.findElement(By.id("lastName"));
 	    LName.sendKeys("Fenacaszx");
 	    WebElement email = driver.findElement(By.id("email"));
-	    email.sendKeys("as82hn65002688g223hhJs@gmail.com");
+	    email.sendKeys("as82hn6j00262288g223hhJs@gmail.com");
 	    WebElement pass = driver.findElement(By.id("password"));
 	    pass.sendKeys("123123123");
 	    
 	   
 	    
 	}
-
+	@Test
 	@Then("I should successfully registered an account")
 	public void i_should_successfully_registered_an_account() {	 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

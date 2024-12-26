@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Testing">
 
-  <test name="Login Test" preserve-order="false">
+  <test name="DDT Testing" preserve-order="false">
     <classes>
       <!-- Specify the correct fully qualified name of the runner class -->
       <class name="com.runner.TestNgRunner" />
