@@ -2,112 +2,64 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Navigate to URL]]>
+      <![CDATA[Navigating to URL]]>
     </line>
     <line>
-      <![CDATA[Entering Valid Credentials]]>
+      <![CDATA[Uploading File]]>
     </line>
     <line>
-      <![CDATA[Logged in with Username: patche@admin]]>
-    </line>
-    <line>
-      <![CDATA[Entering Valid Credentials]]>
-    </line>
-    <line>
-      <![CDATA[Logged in with Username: patche@admin1]]>
-    </line>
-    <line>
-      <![CDATA[Verifying Login Results]]>
-    </line>
-    <line>
-      <![CDATA[Logged in with Username: patche@admin]]>
-    </line>
-    <line>
-      <![CDATA[Successfully proceed to Connect Page]]>
-    </line>
-    <line>
-      <![CDATA[Verifying Login Results]]>
-    </line>
-    <line>
-      <![CDATA[Logged in with Username: patche@admin1]]>
-    </line>
-    <line>
-      <![CDATA[Successfully proceed to Connect Page]]>
+      <![CDATA[File Successfully uploaded!]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-12-26T15:43:42 GMT+08:00" name="Testing" finished-at="2024-12-26T15:43:51 GMT+08:00" duration-ms="9569">
+  <suite started-at="2024-12-27T14:31:11 GMT+08:00" name="Default suite" finished-at="2024-12-27T14:31:18 GMT+08:00" duration-ms="6777">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@394df057]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@7494f96a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-12-26T15:43:42 GMT+08:00" name="DDT Testing" finished-at="2024-12-26T15:43:51 GMT+08:00" duration-ms="9569">
+    <test started-at="2024-12-27T14:31:11 GMT+08:00" name="Default test" finished-at="2024-12-27T14:31:18 GMT+08:00" duration-ms="6777">
       <class name="com.runner.TestNgRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestNgRunner@394df057]" started-at="2024-12-26T15:43:42 GMT+08:00" name="setUpClass" finished-at="2024-12-26T15:43:42 GMT+08:00" duration-ms="449" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestNgRunner@7494f96a]" started-at="2024-12-27T14:31:11 GMT+08:00" name="setUpClass" finished-at="2024-12-27T14:31:11 GMT+08:00" duration-ms="468" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3eabe84a]]>
+                <![CDATA[org.testng.TestRunner@3b46dd8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@394df057]" started-at="2024-12-26T15:43:42 GMT+08:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-26T15:43:51 GMT+08:00" duration-ms="9058" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@7494f96a]" started-at="2024-12-27T14:31:11 GMT+08:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-27T14:31:18 GMT+08:00" duration-ms="6245" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate login with multiple credentials"]]>
+                <![CDATA["Upload PDF/WORD File"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Data-Driven Testing"]]>
+                <![CDATA["File Upload"]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Navigate to URL]]>
+              <![CDATA[Navigating to URL]]>
             </line>
             <line>
-              <![CDATA[Entering Valid Credentials]]>
+              <![CDATA[Uploading File]]>
             </line>
             <line>
-              <![CDATA[Logged in with Username: patche@admin]]>
-            </line>
-            <line>
-              <![CDATA[Entering Valid Credentials]]>
-            </line>
-            <line>
-              <![CDATA[Logged in with Username: patche@admin1]]>
-            </line>
-            <line>
-              <![CDATA[Verifying Login Results]]>
-            </line>
-            <line>
-              <![CDATA[Logged in with Username: patche@admin]]>
-            </line>
-            <line>
-              <![CDATA[Successfully proceed to Connect Page]]>
-            </line>
-            <line>
-              <![CDATA[Verifying Login Results]]>
-            </line>
-            <line>
-              <![CDATA[Logged in with Username: patche@admin1]]>
-            </line>
-            <line>
-              <![CDATA[Successfully proceed to Connect Page]]>
+              <![CDATA[File Successfully uploaded!]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@394df057]" started-at="2024-12-26T15:43:51 GMT+08:00" name="tearDownClass" finished-at="2024-12-26T15:43:51 GMT+08:00" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@7494f96a]" started-at="2024-12-27T14:31:18 GMT+08:00" name="tearDownClass" finished-at="2024-12-27T14:31:18 GMT+08:00" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.runner.TestNgRunner -->
-    </test> <!-- DDT Testing -->
-  </suite> <!-- Testing -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

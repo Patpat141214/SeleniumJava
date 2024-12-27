@@ -8,7 +8,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 		glue = { "com.steps" },
 		plugin = { "pretty", 
 		"html:target/cucumber-Report.html" },
-		tags = "@ddtTesting" )
+		tags = "@UploadTesting" )
 		
 
 public class TestNgRunner extends AbstractTestNGCucumberTests {

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.steps.ddtTestingLogin">
+      <class name="com.steps.UploadStepsDefinition">
         <methods>
-          <include name="i_verify_the_login_results"/>
+          <include name="i_should_see_the_upload_success_message"/>
         </methods>
-      </class> <!-- com.steps.ddtTestingLogin -->
+      </class> <!-- com.steps.UploadStepsDefinition -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
