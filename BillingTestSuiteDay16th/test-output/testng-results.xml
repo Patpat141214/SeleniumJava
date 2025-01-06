@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Start of Test ID (LI01)]]>
+    </line>
+    <line>
+      <![CDATA[Navigating to URL...]]>
+    </line>
+    <line>
+      <![CDATA[Start of Test ID (LI02)]]>
+    </line>
+    <line>
+      <![CDATA[Inputting Valid Credential]]>
+    </line>
+    <line>
+      <![CDATA[Test ID (LI02) Passed ]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to Billing Module...]]>
+    </line>
+    <line>
+      <![CDATA[Kebab Icon successfully clicked]]>
+    </line>
+    <line>
+      <![CDATA[Navigating to Hospital...]]>
+    </line>
+    <line>
+      <![CDATA[Start of Test ID (BIL01)]]>
+    </line>
+    <line>
+      <![CDATA[Test ID (BIL01) Passed ]]>
+    </line>
+    <line>
+      <![CDATA[Start of Test ID (BIL02)]]>
+    </line>
+    <line>
+      <![CDATA[Test ID (BIL02) Passed ]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2025-01-06T17:05:59 GMT+08:00" name="Default suite" finished-at="2025-01-06T17:06:26 GMT+08:00" duration-ms="27828">
+    <groups>
+    </groups>
+    <test started-at="2025-01-06T17:05:59 GMT+08:00" name="Default test" finished-at="2025-01-06T17:06:26 GMT+08:00" duration-ms="27828">
+      <class name="AutomationTesting.BillingTestSuite16th">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:05:59 GMT+08:00" name="setUp" finished-at="2025-01-06T17:06:00 GMT+08:00" duration-ms="1347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="UILoginValidation()[pri:0, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:06:00 GMT+08:00" name="UILoginValidation" finished-at="2025-01-06T17:06:01 GMT+08:00" duration-ms="719" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='footer flex-baseline text-center' and contains(normalize-space(text()), 'PhilHealth Accreditation Code ECS004031213001A')]"}
+  (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4a9bd5a2b39a6dd82b0b43e2bb66723f, findElement {using=xpath, value=//div[@class='footer flex-baseline text-center' and contains(normalize-space(text()), 'PhilHealth Accreditation Code ECS004031213001A')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\pfeniza\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58644/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a9bd5a2b39a6dd82b0b43e2bb66723f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='footer flex-baseline text-center' and contains(normalize-space(text()), 'PhilHealth Accreditation Code ECS004031213001A')]"}
+  (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4a9bd5a2b39a6dd82b0b43e2bb66723f, findElement {using=xpath, value=//div[@class='footer flex-baseline text-center' and contains(normalize-space(text()), 'PhilHealth Accreditation Code ECS004031213001A')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\pfeniza\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58644/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a9bd5a2b39a6dd82b0b43e2bb66723f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at AutomationTesting.BillingTestSuite16th.UILoginValidation(BillingTestSuite16th.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Start of Test ID (LI01)]]>
+            </line>
+            <line>
+              <![CDATA[Navigating to URL...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UILoginValidation -->
+        <test-method signature="ValidationOfLogin()[pri:1, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:06:01 GMT+08:00" name="ValidationOfLogin" finished-at="2025-01-06T17:06:01 GMT+08:00" duration-ms="661" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Start of Test ID (LI02)]]>
+            </line>
+            <line>
+              <![CDATA[Inputting Valid Credential]]>
+            </line>
+            <line>
+              <![CDATA[Test ID (LI02) Passed ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ValidationOfLogin -->
+        <test-method signature="NavigateBillingModule()[pri:2, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:06:01 GMT+08:00" name="NavigateBillingModule" finished-at="2025-01-06T17:06:02 GMT+08:00" duration-ms="264" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Navigate to Billing Module...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- NavigateBillingModule -->
+        <test-method signature="searchHospital()[pri:3, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:06:02 GMT+08:00" name="searchHospital" finished-at="2025-01-06T17:06:21 GMT+08:00" duration-ms="19610" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Kebab Icon successfully clicked]]>
+            </line>
+            <line>
+              <![CDATA[Navigating to Hospital...]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchHospital -->
+        <test-method signature="validateBillingPeriodColumn()[pri:4, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:06:21 GMT+08:00" name="validateBillingPeriodColumn" finished-at="2025-01-06T17:06:26 GMT+08:00" duration-ms="5025" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Start of Test ID (BIL01)]]>
+            </line>
+            <line>
+              <![CDATA[Test ID (BIL01) Passed ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateBillingPeriodColumn -->
+        <test-method signature="validateBillingDateColumn()[pri:5, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:06:26 GMT+08:00" name="validateBillingDateColumn" finished-at="2025-01-06T17:06:26 GMT+08:00" duration-ms="21" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Start of Test ID (BIL02)]]>
+            </line>
+            <line>
+              <![CDATA[Test ID (BIL02) Passed ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateBillingDateColumn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTesting.BillingTestSuite16th@3270d194]" started-at="2025-01-06T17:06:26 GMT+08:00" name="tearDown" finished-at="2025-01-06T17:06:26 GMT+08:00" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AutomationTesting.BillingTestSuite16th -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
