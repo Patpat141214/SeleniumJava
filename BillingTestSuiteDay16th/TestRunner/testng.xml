@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="Field Testing">
+<suite parallel="false" name="Billing Day Test Suite">
 
-  <test name="Login" preserve-order="true">>
+  <test name="Billing Semi Monthly" preserve-order="true">>
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th"/>
     </classes>

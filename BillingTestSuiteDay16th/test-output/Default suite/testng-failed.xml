@@ -6,8 +6,8 @@
       <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
           <include name="tearDown"/>
-          <include name="UILoginValidation"/>
           <include name="setUp"/>
+          <include name="COL01"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite16th -->
     </classes>

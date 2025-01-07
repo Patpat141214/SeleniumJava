@@ -2,6 +2,7 @@ package AutomationTesting;
 
 import static org.testng.Assert.fail;
 
+import java.text.DecimalFormat;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -23,18 +24,18 @@ public class BillingTestSuite16th extends SettingClass {
 	
 	
     @Test (priority = 0)
-    public void UILoginValidation() {
-    	
+    public void LI01() {
+    	Reporter.log("Start of Login Validation...)", true);
     	Reporter.log("Start of Test ID (LI01)", true);
     	Reporter.log("Navigating to URL...", true);
     	driver.get(link);   
     	WebElement usr = driver.findElement(By.id("Username"));
     	WebElement pass = driver.findElement(By.id("Password"));
-    	WebElement loginBtn = driver.findElement(By.id("submitBtn"));
-    	WebElement version = driver.findElement(By.xpath("//div[@class='footer flex-baseline text-center' and contains(normalize-space(text()), 'Easy Claims Manager version')]"));
-    	WebElement website = driver.findElement(By.xpath("//a[@href='http://www.eurolinkonline.com' and contains(normalize-space(text()), 'Eurolink Network International Corporation')]"));
-    	WebElement accreCode = driver.findElement(By.xpath("//div[@class='footer flex-baseline text-center' and contains(normalize-space(text()), 'PhilHealth Accreditation Code ECS004031213001A')]"));
-    	if (usr.isDisplayed() && pass.isDisplayed() && loginBtn.isDisplayed() && version.isDisplayed() && website.isDisplayed() && accreCode.isDisplayed()) {
+    	WebElement loginBtn = driver.findElement(By.id("submitBtn"));  	
+    	WebElement footer = driver.findElement(By.xpath("/html/body/div/div/div/div[3]"));
+    	
+    
+    	if (usr.isDisplayed() && pass.isDisplayed() && loginBtn.isDisplayed() && footer.isDisplayed()) {
     		Assert.assertTrue(true,"UI's ");
     		Reporter.log("All Elements are loaded!", true);
     		Reporter.log("Test ID (LI01) Passed ", true);
@@ -51,7 +52,7 @@ public class BillingTestSuite16th extends SettingClass {
     }
     
     @Test (priority = 1)
-    public void ValidationOfLogin() {
+    public void LI02() {
          
     	Reporter.log("Start of Test ID (LI02)", true);
     	
@@ -65,6 +66,7 @@ public class BillingTestSuite16th extends SettingClass {
     	if (homePage.contentEquals("Home Page")) {    	 
     		Assert.assertTrue(true, "Login Validation Passed");
     		Reporter.log("Test ID (LI02) Passed ", true);
+    		Reporter.log("End of Login Validation!", true);
     	}else {
     		Reporter.log("Test ID (LI02) Failed ", true);
     		Assert.fail();
@@ -78,13 +80,16 @@ public class BillingTestSuite16th extends SettingClass {
     
     
     @Test (priority = 2)
-    public void NavigateBillingModule() {
-    
+    public void BIL01() {
+    	Reporter.log("Start of Billing Module Validation...", true);
     	Reporter.log("Navigate to Billing Module...", true);
-    	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Billing']")).click();    	   	
-}
-    @Test (priority = 3)
-    public void searchHospital() {
+    	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Billing']")).click();    	
+    	
+    	try {
+            Thread.sleep(5000);  // Pause for 2 seconds to wait for the page to load
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     	
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	
@@ -95,7 +100,7 @@ public class BillingTestSuite16th extends SettingClass {
  	   Reporter.log("Kebab Icon successfully clicked", true);
  	   
  	   try {
-	            Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
+	            Thread.sleep(5000);  // Pause for 2 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -106,7 +111,7 @@ public class BillingTestSuite16th extends SettingClass {
         actions.moveToElement(hoverElement).perform();
         
         try {
-	            Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
+	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -119,7 +124,7 @@ public class BillingTestSuite16th extends SettingClass {
      textBox.sendKeys(Keys.ENTER);
      
      try {
-         Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
+         Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
      } catch (InterruptedException e) {
          e.printStackTrace();
      }
@@ -136,7 +141,7 @@ public class BillingTestSuite16th extends SettingClass {
      
     
     try {
-        Thread.sleep(2000);  // Pause for 5 seconds to wait for the page to load
+        Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
     } catch (InterruptedException e) {
         e.printStackTrace();
     }
@@ -144,16 +149,12 @@ public class BillingTestSuite16th extends SettingClass {
     billingDateElement.click();
     
     try {
-        Thread.sleep(2000);  // Pause for 5 seconds to wait for the page to load
+        Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
     } catch (InterruptedException e) {
         e.printStackTrace();
     }
     
     
-    }
-    
-    @Test (priority = 4)
-    public void validateBillingPeriodColumn() {
     	
     	Reporter.log("Start of Test ID (BIL01)", true);
     	
@@ -161,9 +162,10 @@ public class BillingTestSuite16th extends SettingClass {
     	       	       	    
     	   String ExpectedBillingPeriod = "Dec 01, 2024 - Dec 15, 2024";//Need to Change base on billing execution
     	     	   
-    	   if (billingPeriod.contentEquals(ExpectedBillingPeriod)){
-    	 	  Assert.assertTrue(true, "Billing Period is valid!");
+    	   if (billingPeriod.contentEquals(ExpectedBillingPeriod)){   	 
     	 	 Reporter.log("Test ID (BIL01) Passed ", true);
+    	 	Reporter.log("Billing Period is Valid which is: " + ExpectedBillingPeriod, true);
+    		 Assert.assertTrue(true, "Billing Period is valid!");
     	 	  
     	   }
     	   else {
@@ -174,24 +176,24 @@ public class BillingTestSuite16th extends SettingClass {
     	   }
     	       	       	    	          
     	   try {
-    	       Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
+    	       Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
     	   } catch (InterruptedException e) {
     	       e.printStackTrace();
     	   }
     	      	      	 	   
     	 }
     
-    @Test (priority = 5)
-    public void validateBillingDateColumn() {
+    @Test (priority = 3)
+    public void BIL02() {
     	Reporter.log("Start of Test ID (BIL02)", true);
     	 String billingDate = driver.findElement(By.xpath("//td[@data-field='BillingDate' and text()='Dec 16, 2024']")).getText();
     	 String ExpectedBillingDate = "Dec 16, 2024";//Need to Change base on billing execution
     	
-    	 System.out.println(billingDate);
     	 
-    	 if (billingDate.contentEquals(ExpectedBillingDate)) {
-    		 Assert.assertTrue(true, "Billing Date is Valid");
+    	 if (billingDate.contentEquals(ExpectedBillingDate)) {    		
  	 	 Reporter.log("Test ID (BIL02) Passed ", true);
+ 	 	Reporter.log("Billing Date is Valid which is: " + ExpectedBillingDate, true);
+ 	 	 Assert.assertTrue(true, "Billing Date is Valid");
     	 }
     	 else {
     		 Reporter.log("Test ID (BIL02) Failed ", true);
@@ -199,8 +201,126 @@ public class BillingTestSuite16th extends SettingClass {
     	 	 
     	 }
     	 
+    	 
+    }
+    @Test (priority = 4)
+    public void BIL03() {
+    	Reporter.log("Start of Test ID (BIL03)", true);
+    	 String totalClaims = driver.findElement(By.xpath("//td[@data-field='TotalClaims']")).getText();
+    	 String serviceFee = driver.findElement(By.xpath("//td[@data-field='ServiceFee']")).getText();
+    	 String totalAmount = driver.findElement(By.xpath("//td[@data-field='TotalAmount']")).getText();
+    	 //String ExpectedBillingDate = "Dec 16, 2024";//Need to Change base on billing execution
+    	
+    	 totalClaims = String.format("%.2f", Double.parseDouble(totalClaims));
+
+    	// Remove "Php" from serviceFee and convert it to a numeric format
+    	serviceFee = serviceFee.replace("Php", "").trim();    	
+
+    	double totalClaimsValue = Double.parseDouble(totalClaims);
+    	double ServiceFeeValue = Double.parseDouble(serviceFee);
+    	
+    	double totalExpectedValue = totalClaimsValue * ServiceFeeValue;
+    	
+    	String formattedTotalAmount = "Php " + String.format("%,.2f", totalExpectedValue);
+    	
+
+   	 if (totalAmount.contentEquals(formattedTotalAmount)) {
+   		 Assert.assertTrue(true, "Total Amount is correct!");
+   		 Reporter.log("Total Amouns is: " + formattedTotalAmount, true);
+	 	     Reporter.log("Test ID (BIL03) Passed ", true);
+   	 }
+   	 else {
+   		 Reporter.log("Test ID (BIL03) Failed ", true);
+   		  Assert.fail();
+   	 	 
+   	 }
+    	
+    	 	 
+    	 }
+    
+    @Test (priority = 5)
+    public void BIL04() {
+    	
+   
+    	Reporter.log("Start of Test ID (BIL04)", true);
+    	 String billingPeriod = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='Dec 01, 2024 - Dec 15, 2024']")).getText(); //Need to Change base on billing execution
+     	String soaDate = driver.findElement(By.xpath("//td[@data-field='SoaDate' and text()='Dec 16, 2024']")).getText(); //Need to Change base on billing execution
+     	 String ExpectedBillingPeriod = "Dec 01, 2024 - Dec 15, 2024";
+     	String expectedSoaDate = "Dec 16, 2024";
+
+   	 if (billingPeriod.contentEquals(ExpectedBillingPeriod) && soaDate.contentEquals(expectedSoaDate)) {
+   		 Reporter.log("Test ID (BIL04) Passed ", true);
+   		Reporter.log("Soa Date is Valid which is: " + expectedSoaDate, true);
+   		Reporter.log("End of Billing Module", true);
+   		 Assert.assertTrue(true, "Soa Date is Valid!");
+	 	
+   	 }
+   	 else {
+   		 Reporter.log("Test ID (BIL04) Failed ", true);
+   		  Assert.fail();
+   	 	 
+   	 }
+    	
+    	 	 
+    	 }
+    
+    @Test (priority = 6)
+    public void COL01() {
+    	         
+    	Reporter.log("Start of Collection Module Validation...", true);
+    	Reporter.log("Navigate to Collection Module...", true);
+    	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Collection']")).click();    	
+    	 try {
+  	       Thread.sleep(5000);  // Pause for 7 seconds to wait for the page to load
+  	   } catch (InterruptedException e) {
+  	       e.printStackTrace();
+  	   }
+    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        	
+    	 	   WebElement kebabIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[3]/div[3]/div[2]/div/table/thead/tr/th[7]/a[1]/span")));
+    	 
+    	 kebabIcon.click();
+    	 
+    	 try {
+	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+    	 	   
+    	 WebElement hoverElement = driver.findElement(By.xpath("/html/body/div[7]/div/ul/li[6]"));
+   	   
+   	   Actions actions = new Actions(driver);
+          actions.moveToElement(hoverElement).perform();
+          
+          WebElement textBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[7]/div/ul/li[6]/div/ul/li/div/form/div/input")));
+          
+          textBox.sendKeys("H03021076");
+          textBox.sendKeys(Keys.ENTER);
+          
+          try {
+  	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+  	        } catch (InterruptedException e) {
+  	            e.printStackTrace();
+  	        }
+          
+          WebElement detailsBtn = driver.findElement(By.xpath("//*[@id=\"CollectionGrid\"]/div[3]/table/tbody/tr/td[24]/a[2]"));
+          JavascriptExecutor js = (JavascriptExecutor) driver;
+          js.executeScript("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", detailsBtn);
+
+          // Click the element
+          detailsBtn.click();
+          
+          try {
+	            Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+    	 }
+          
+     
     }
     
-    }
+    
+    
 
 

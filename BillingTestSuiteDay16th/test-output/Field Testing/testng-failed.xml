@@ -3,13 +3,13 @@
 <suite name="Failed suite [Field Testing]">
   <test thread-count="5" name="Login(failed)">
     <classes>
-      <class name="AutomationTesting.BillingModule">
+      <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
           <include name="tearDown"/>
+          <include name="UILoginValidation"/>
           <include name="setUp"/>
-          <include name="NavigateToBilling"/>
         </methods>
-      </class> <!-- AutomationTesting.BillingModule -->
+      </class> <!-- AutomationTesting.BillingTestSuite16th -->
     </classes>
   </test> <!-- Login(failed) -->
 </suite> <!-- Failed suite [Field Testing] -->
