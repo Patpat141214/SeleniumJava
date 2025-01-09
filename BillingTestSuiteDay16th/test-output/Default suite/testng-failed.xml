@@ -5,8 +5,8 @@
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
-          <include name="COL02"/>
           <include name="tearDown"/>
+          <include name="COL03"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite16th -->

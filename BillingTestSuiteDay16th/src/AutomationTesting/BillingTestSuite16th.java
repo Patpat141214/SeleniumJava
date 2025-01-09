@@ -268,7 +268,7 @@ public class BillingTestSuite16th extends SettingClass {
     
     @Test (priority = 6)
     public void COL01() {
-    	         
+    	Reporter.log("Start of Test ID (COL01)", true);         
     	Reporter.log("Start of Collection Module Validation...", true);
     	Reporter.log("Navigate to Collection Module...", true);
     	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Collection']")).click();    	
@@ -345,38 +345,108 @@ public class BillingTestSuite16th extends SettingClass {
     }
     @Test (priority = 7)
     public void COL02() {
+    	Reporter.log("Start of Test ID (COL02)", true);     
     	 driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
     	driver.findElement(By.xpath("//span[@class='k-link' and text()='Payment']")).click();
 
     	 try {
-	            Thread.sleep(3000);  // Pause for 5 seconds to wait for the page to load
+	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
     	 
     	 driver.findElement(By.xpath("//button[contains(@class, 'k-button') and contains(@class, 'k-primary') and contains(@onclick, 'addPaymentWindow')]")).click();
     	 try {
-	            Thread.sleep(2000);  // Pause for 5 seconds to wait for the page to load
+	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
-    	 
-         driver.findElement(By.xpath("/html/body/div[11]/div[2]/form/ul/li[1]/div/span[1]/span/span[1] and text()='Dec 16, 2024 - Dec 30, 2024'"));
-    	 
+     
+    	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	 WebElement firstOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='k-input' and text()='Select Billing']")));
+         firstOption.click();
+        
+         WebElement billingPeriodOption = wait.until(ExpectedConditions.elementToBeClickable(
+        	        By.xpath("//li[@class='k-item' and text()='Dec 16, 2024 - Dec 31, 2024']")));
+        	billingPeriodOption.click();
+        	
+        	
+
+         String billingPeriod = driver.findElement(By.xpath("//span[@class='k-input'and text()='"+this.billingPeriod+"']")).getText();
+        
+         if (billingPeriod.toLowerCase().contentEquals(this.billingPeriod.toLowerCase())) {
+       		 Reporter.log("Test ID (COL02) Passed ", true);
+       	   		Reporter.log("Billing Period is Valid which is: " + billingPeriod, true);
+       	   	
+       	   		 Assert.assertTrue(true, "Billing Period is Valid!");
+         }else {
+      	   Reporter.log("Test ID (COL02) Failed ", true);
+      		  Assert.fail();
+       	  
+         }
+                                
+         driver.switchTo().defaultContent();   	
     	 try {
 	            Thread.sleep(2000);  // Pause for 5 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
  	 
- 	 
-    	 driver.switchTo().defaultContent();
-    	 
-    	 
-       
+   
     	
     	
+    }
+    
+    @Test (priority = 8)
+    public void COL03() {
+    	Reporter.log("Start of Test ID (COL03)", true);    
     	
+    	 driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+    	 WebElement curBalance = driver.findElement(By.xpath("//input[@class='k-formatted-value k-input']"));
+    	 String balanceText = curBalance.getAttribute("title");
+    	 String balanceFormattedText = balanceText.replace("₱", "Php ").trim();
+    	   if (balanceFormattedText.contentEquals(this.formattedTotalAmount)) {
+         		 Reporter.log("Test ID (COL03) Passed ", true);
+         	   		Reporter.log("Current Balance is correct which is: " + balanceFormattedText , true);        	
+         	   	Reporter.log("End of Collection Module", true);
+         	   		Assert.assertTrue(true, "Current Balance is correct!");
+           }else {
+        	   Reporter.log("Test ID (COL03) Failed ", true);
+        	   Assert.fail();
+         	  
+           }
+    	    driver.navigate().back();
+    	   driver.switchTo().defaultContent();   	
+    	   
+    	   
+    	      	  
+    	 try {
+	            Thread.sleep(2000);  // Pause for 5 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	 
+    }
+    
+    @Test (priority = 9)
+    public void AR01() {
+    	Reporter.log("Start of Test ID (AR01)", true);    
+    	Reporter.log("Start of Account Receivable Module Validation...", true);
+    	WebElement navReports = driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Reports']"));
+    	
+    	 Actions actions = new Actions(driver);
+         actions.moveToElement(navReports).perform();
+    	
+         WebElement AccReceivable = driver.findElement(By.xpath("//span[@class='context-menu-itemText' and text()='Accounts Receivable']"));
+         AccReceivable.click();
+         
+     	  
+         	try {
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	 
     }
     
 }
