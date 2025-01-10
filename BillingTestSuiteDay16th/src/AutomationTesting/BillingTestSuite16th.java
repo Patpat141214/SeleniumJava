@@ -4,6 +4,7 @@ import static org.testng.Assert.fail;
 
 import java.text.DecimalFormat;
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,12 +16,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import bsh.This;
 
 public class BillingTestSuite16th extends SettingClass {
 	  String totalClaims; // Class-level variable for TotalClaims
 	    String formattedTotalAmount;
-	    String billingPeriod;
+	    //String billingPeriod = "Dec 16, 2024 - Dec 31, 2024" ;
+	    //String billingDate = "Jan 01, 2025";
+     	//String expectedSoaDate = "Dec 31, 2024";
 
 	String link = "https://manager.easyclaimsph.com";
 	
@@ -80,9 +86,9 @@ public class BillingTestSuite16th extends SettingClass {
    }
     
     
-    
+    @Parameters({"billingPeriod"})
     @Test (priority = 2)
-    public void BIL01() {
+    public void BIL01(String billingPeriod) {
     	Reporter.log("Start of Billing Module Validation...", true);
     	Reporter.log("Navigate to Billing Module...", true);
     	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Billing']")).click();    	
@@ -160,13 +166,11 @@ public class BillingTestSuite16th extends SettingClass {
     	
     	Reporter.log("Start of Test ID (BIL01)", true);
     	
-    	billingPeriod = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='Dec 16, 2024 - Dec 31, 2024']")).getText(); //Need to Change base on billing execution
-    	       	       	    
-    	   String ExpectedBillingPeriod = "Dec 16, 2024 - Dec 31, 2024";//Need to Change base on billing execution
-    	     	   
-    	   if (billingPeriod.contentEquals(ExpectedBillingPeriod)){   	 
+    	String BillingPeriod = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='"+billingPeriod+"']")).getText(); //Need to Change base on billing execution
+    	       	       	        	     	   
+    	   if (BillingPeriod.contentEquals(billingPeriod)){   	 
     	 	 Reporter.log("Test ID (BIL01) Passed ", true);
-    	 	Reporter.log("Billing Period is Valid which is: " + ExpectedBillingPeriod, true);
+    	 	Reporter.log("Billing Period is Valid which is: " + BillingPeriod, true);
     		 Assert.assertTrue(true, "Billing Period is valid!");
     	 	  
     	   }
@@ -185,16 +189,16 @@ public class BillingTestSuite16th extends SettingClass {
     	      	      	 	   
     	 }
     
+    @Parameters({"billingDate"})
     @Test (priority = 3)
-    public void BIL02() {
+    public void BIL02(String billingDate) {
     	Reporter.log("Start of Test ID (BIL02)", true);
-    	 String billingDate = driver.findElement(By.xpath("//td[@data-field='BillingDate' and text()='Jan 01, 2025']")).getText();
-    	 String ExpectedBillingDate = "Jan 01, 2025";//Need to Change base on billing execution
+    	 String BillingDate = driver.findElement(By.xpath("//td[@data-field='BillingDate' and text()='"+billingDate+"']")).getText();
     	
     	 
-    	 if (billingDate.contentEquals(ExpectedBillingDate)) {    		
+    	 if (BillingDate.contentEquals( billingDate)) {    		
  	 	 Reporter.log("Test ID (BIL02) Passed ", true);
- 	 	Reporter.log("Billing Date is Valid which is: " + ExpectedBillingDate, true);
+ 	 	Reporter.log("Billing Date is Valid which is: " + BillingDate, true);
  	 	 Assert.assertTrue(true, "Billing Date is Valid");
     	 }
     	 else {
@@ -240,19 +244,19 @@ public class BillingTestSuite16th extends SettingClass {
     	 	 
     	 }
     
+    @Parameters({"billingPeriod", "expectedSoaDate"})
     @Test (priority = 5)
-    public void BIL04() {
+    public void BIL04(String billingPeriod, String expectedSoaDate) {
     	
    
     	Reporter.log("Start of Test ID (BIL04)", true);
-    	 billingPeriod = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='Dec 16, 2024 - Dec 31, 2024']")).getText(); //Need to Change base on billing execution
-     	String soaDate = driver.findElement(By.xpath("//td[@data-field='SoaDate' and text()='Dec 31, 2024']")).getText(); //Need to Change base on billing execution
-     	 String ExpectedBillingPeriod = "Dec 16, 2024 - Dec 31, 2024";
-     	String expectedSoaDate = "Dec 31, 2024";
+    	 String BillingPeriod = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='"+billingPeriod+"']")).getText(); //Need to Change base on billing execution
+     	String soaDate = driver.findElement(By.xpath("//td[@data-field='SoaDate' and text()='"+expectedSoaDate+"']")).getText(); //Need to Change base on billing execution
 
-   	 if (billingPeriod.contentEquals(ExpectedBillingPeriod) && soaDate.contentEquals(expectedSoaDate)) {
+
+   	 if (BillingPeriod.contentEquals(billingPeriod) && soaDate.contentEquals(expectedSoaDate)) {
    		 Reporter.log("Test ID (BIL04) Passed ", true);
-   		Reporter.log("Soa Date is Valid which is: " + expectedSoaDate, true);
+   		Reporter.log("Soa Date is Valid which is: " + soaDate, true);
    		Reporter.log("End of Billing Module", true);
    		 Assert.assertTrue(true, "Soa Date is Valid!");
 	 	
@@ -266,8 +270,9 @@ public class BillingTestSuite16th extends SettingClass {
     	 	 
     	 }
     
+    @Parameters({"billingPeriod"})
     @Test (priority = 6)
-    public void COL01() {
+    public void COL01(String billingPeriod) {
     	Reporter.log("Start of Test ID (COL01)", true);         
     	Reporter.log("Start of Collection Module Validation...", true);
     	Reporter.log("Navigate to Collection Module...", true);
@@ -305,13 +310,48 @@ public class BillingTestSuite16th extends SettingClass {
   	            e.printStackTrace();
   	        }
           
-          WebElement detailsBtn = driver.findElement(By.xpath("//*[@id=\"CollectionGrid\"]/div[3]/table/tbody/tr/td[24]/a[2]"));
-          JavascriptExecutor js = (JavascriptExecutor) driver;
-          js.executeScript("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", detailsBtn);
 
-          // Click the element
-          detailsBtn.click();
+
+       // Try to locate the "Unlock" button
+       List<WebElement> unlockButtons = driver.findElements(By.xpath("//a[contains(@class, 'k-button k-button-icontext k-grid-details') and text()='Unlock']"));
+
+       // Check if the "Unlock" button is present
+       if (!unlockButtons.isEmpty()) {
+           Reporter.log("'Unlock' button found. Clicking to unlock...", true);
+
+           // Click the "Unlock" button
+           WebElement unlockBtn = unlockButtons.get(0); // Since it's a single button
+           	unlockBtn.click();
+           	
+           try {
+               Thread.sleep(2000); // Wait for the button to change state
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+       }
+
+       // Locate the "Details" button (after unlocking or directly)
+       WebElement detailsBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
+           By.xpath("//a[contains(@class, 'k-button k-button-icontext k-grid-details') and text()='Details']")));
+
+       // Ensure the button is visible and enabled
+       if (detailsBtn.isDisplayed() && detailsBtn.isEnabled()) {
+           Reporter.log("'Details' button found. Clicking to proceed...", true);
+
+           // Scroll to the "Details" button
+           JavascriptExecutor js = (JavascriptExecutor) driver;
+           js.executeScript("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", detailsBtn);
+
+           // Click the "Details" button
+           detailsBtn.click();
+           Reporter.log("Successfully clicked 'Details' button. Proceeding to the new tab...", true);
+       } else {
+           Reporter.log("'Details' button is not clickable. Test failed.", true);
+           Assert.fail("Could not click the 'Details' button.");
+       }
           
+        
+                          
           try {
 	            Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
@@ -320,7 +360,7 @@ public class BillingTestSuite16th extends SettingClass {
           
          
           driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-          WebElement billingPeriod = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Billing Period:']/following-sibling::div")));
+          WebElement BillingPeriod = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Billing Period:']/following-sibling::div")));
           WebElement totalClaims = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Total Claims:']/following-sibling::div")));
           String totalAmount = driver.findElement(By.xpath("//div[text()='Total Amount:']/following-sibling::div")).getText();
 
@@ -328,9 +368,9 @@ public class BillingTestSuite16th extends SettingClass {
           String totalAmountFormatted = totalAmount.replace("PHP", "").trim();
           
           
-          if (billingPeriod.getText().contentEquals(this.billingPeriod) && totalClaims.getText().contentEquals(this.totalClaims.replace(".00","")) && totalAmountFormatted.contentEquals(this.formattedTotalAmount.replace("Php","").trim())) {
+          if (BillingPeriod.getText().contentEquals(billingPeriod) && totalClaims.getText().contentEquals(this.totalClaims.replace(".00","")) && totalAmountFormatted.contentEquals(this.formattedTotalAmount.replace("Php","").trim())) {
        		 Reporter.log("Test ID (COL01) Passed ", true);
-       	   		Reporter.log("Billing Period is Valid which is: " + billingPeriod.getText(), true);
+       	   		Reporter.log("Billing Period is Valid which is: " + BillingPeriod.getText(), true);
        	   		Reporter.log("Total Claims is Valid which is: " + totalClaims.getText(), true);
        	   		Reporter.log("Total Amount is Valid which is: " + totalAmount, true);
        	   		 Assert.assertTrue(true, "Latest billing are all Valid!");
@@ -343,8 +383,10 @@ public class BillingTestSuite16th extends SettingClass {
           driver.switchTo().defaultContent();
      
     }
+    
+    @Parameters({"billingPeriod"})
     @Test (priority = 7)
-    public void COL02() {
+    public void COL02(String billingPeriod) {
     	Reporter.log("Start of Test ID (COL02)", true);     
     	 driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
     	driver.findElement(By.xpath("//span[@class='k-link' and text()='Payment']")).click();
@@ -367,16 +409,16 @@ public class BillingTestSuite16th extends SettingClass {
          firstOption.click();
         
          WebElement billingPeriodOption = wait.until(ExpectedConditions.elementToBeClickable(
-        	        By.xpath("//li[@class='k-item' and text()='Dec 16, 2024 - Dec 31, 2024']")));
+        	        By.xpath("//li[@class='k-item' and text()='"+billingPeriod+"']")));
         	billingPeriodOption.click();
         	
         	
 
-         String billingPeriod = driver.findElement(By.xpath("//span[@class='k-input'and text()='"+this.billingPeriod+"']")).getText();
+         String BillingPeriod = driver.findElement(By.xpath("//span[@class='k-input'and text()='"+billingPeriod+"']")).getText();
         
-         if (billingPeriod.toLowerCase().contentEquals(this.billingPeriod.toLowerCase())) {
+         if (BillingPeriod.toLowerCase().contentEquals(billingPeriod.toLowerCase())) {
        		 Reporter.log("Test ID (COL02) Passed ", true);
-       	   		Reporter.log("Billing Period is Valid which is: " + billingPeriod, true);
+       	   		Reporter.log("Billing Period is Valid which is: " + BillingPeriod, true);
        	   	
        	   		 Assert.assertTrue(true, "Billing Period is Valid!");
          }else {
@@ -415,22 +457,23 @@ public class BillingTestSuite16th extends SettingClass {
         	   Assert.fail();
          	  
            }
-    	    driver.navigate().back();
     	   driver.switchTo().defaultContent();   	
-    	   
-    	   
-    	      	  
+    	    driver.navigate().back();
+    	  
+    	       	    	      	  
     	 try {
-	            Thread.sleep(2000);  // Pause for 5 seconds to wait for the page to load
+	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
 	 
     }
     
+    @Parameters({"statementDate"})
     @Test (priority = 9)
-    public void AR01() {
+    public void AR01(String statementDate) {
     	Reporter.log("Start of Test ID (AR01)", true);    
+    	Reporter.log("Navigating to Account Receivable Module...", true);    
     	Reporter.log("Start of Account Receivable Module Validation...", true);
     	WebElement navReports = driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Reports']"));
     	
@@ -446,7 +489,65 @@ public class BillingTestSuite16th extends SettingClass {
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
-	 
+         	
+         	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        	
+ 	 	   WebElement kebabIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[3]/div[3]/div[2]/div/table/thead/tr/th[3]/a[1]/span")));
+ 	 
+ 	 kebabIcon.click();
+ 	 
+ 	 try {
+	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+ 	 	   
+ 	 WebElement hoverFilter = driver.findElement(By.xpath("/html/body/div[7]/div/ul/li[6]/span"));
+	   
+	   Actions actions1 = new Actions(driver);
+       actions1.moveToElement(hoverFilter).perform();
+       
+       WebElement textBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[7]/div/ul/li[6]/div/ul/li/div/form/div/input")));
+       
+       textBox.sendKeys("H03021076");
+       textBox.sendKeys(Keys.ENTER);
+       
+       try {
+	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+       
+       String StatementDate = driver.findElement(By.xpath("//td[text()='"+statementDate+"']")).getText();
+	    
+       if (StatementDate.contentEquals(statementDate)) {
+   		 Reporter.log("Test ID (AR01) Passed ", true);
+   	   		Reporter.log("Statement Date is correct which is: " + StatementDate , true);        	
+   	   		Assert.assertTrue(true, "Statement Date is correct!");
+     }else {
+  	   Reporter.log("Test ID (AR01) Failed ", true);
+  	   Assert.fail();
+   	  
+     }
+       
+    }
+    
+    @Parameters({"billingPeriod"})
+    @Test (priority = 10)
+    public void AR02(String billingPeriod) {
+    	Reporter.log("Start of Test ID (AR02)", true);    
+    	 
+    	String getBillingPeriod = driver.findElement(By.xpath("//td[text()='"+billingPeriod+"']")).getText();
+    	 if (getBillingPeriod.contentEquals(billingPeriod)) {
+       		 Reporter.log("Test ID (AR02) Passed ", true);
+       	   		Reporter.log("Billing Period is correct which is: " + billingPeriod , true);        	
+       	   		Assert.assertTrue(true, "Billing Period is correct");
+         }else {
+      	   Reporter.log("Test ID (AR02) Failed ", true);
+      	   Assert.fail();
+       	  
+         }
+       
     }
     
 }

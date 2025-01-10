@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Start of Login Validation...)]]>
@@ -89,6 +89,15 @@
       <![CDATA[Navigate to Collection Module...]]>
     </line>
     <line>
+      <![CDATA['Unlock' button found. Clicking to unlock...]]>
+    </line>
+    <line>
+      <![CDATA['Details' button found. Clicking to proceed...]]>
+    </line>
+    <line>
+      <![CDATA[Successfully clicked 'Details' button. Proceeding to the new tab...]]>
+    </line>
+    <line>
       <![CDATA[Test ID (COL01) Passed ]]>
     </line>
     <line>
@@ -125,19 +134,37 @@
       <![CDATA[Start of Test ID (AR01)]]>
     </line>
     <line>
+      <![CDATA[Navigating to Account Receivable Module...]]>
+    </line>
+    <line>
       <![CDATA[Start of Account Receivable Module Validation...]]>
     </line>
+    <line>
+      <![CDATA[Test ID (AR01) Passed ]]>
+    </line>
+    <line>
+      <![CDATA[Statement Date is correct which is: Dec 31, 2024]]>
+    </line>
+    <line>
+      <![CDATA[Start of Test ID (AR02)]]>
+    </line>
+    <line>
+      <![CDATA[Test ID (AR02) Passed ]]>
+    </line>
+    <line>
+      <![CDATA[Billing Period is correct which is: Dec 16, 2024 - Dec 31, 2024]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-01-09T16:40:45 GMT+08:00" name="Default suite" finished-at="2025-01-09T16:41:37 GMT+08:00" duration-ms="52400">
+  <suite started-at="2025-01-10T16:04:35 GMT+08:00" name="Billing Day Test Suite" finished-at="2025-01-10T16:05:36 GMT+08:00" duration-ms="61118">
     <groups>
     </groups>
-    <test started-at="2025-01-09T16:40:45 GMT+08:00" name="Default test" finished-at="2025-01-09T16:41:37 GMT+08:00" duration-ms="52400">
+    <test started-at="2025-01-10T16:04:35 GMT+08:00" name="Billing Semi Monthly" finished-at="2025-01-10T16:05:36 GMT+08:00" duration-ms="61118">
       <class name="AutomationTesting.BillingTestSuite16th">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:40:45 GMT+08:00" name="setUp" finished-at="2025-01-09T16:40:46 GMT+08:00" duration-ms="1374" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:04:35 GMT+08:00" name="setUp" finished-at="2025-01-10T16:04:36 GMT+08:00" duration-ms="1419" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LI01()[pri:0, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:40:46 GMT+08:00" name="LI01" finished-at="2025-01-09T16:40:47 GMT+08:00" duration-ms="1027" status="PASS">
+        <test-method signature="LI01()[pri:0, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:04:36 GMT+08:00" name="LI01" finished-at="2025-01-10T16:04:39 GMT+08:00" duration-ms="2663" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Start of Login Validation...)]]>
@@ -156,7 +183,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- LI01 -->
-        <test-method signature="LI02()[pri:1, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:40:47 GMT+08:00" name="LI02" finished-at="2025-01-09T16:40:49 GMT+08:00" duration-ms="1456" status="PASS">
+        <test-method signature="LI02()[pri:1, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:04:39 GMT+08:00" name="LI02" finished-at="2025-01-10T16:04:40 GMT+08:00" duration-ms="1340" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (LI02)]]>
@@ -172,7 +199,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- LI02 -->
-        <test-method signature="BIL01()[pri:2, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:40:49 GMT+08:00" name="BIL01" finished-at="2025-01-09T16:41:10 GMT+08:00" duration-ms="20909" status="PASS">
+        <test-method signature="BIL01(java.lang.String)[pri:2, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:04:40 GMT+08:00" name="BIL01" finished-at="2025-01-10T16:05:01 GMT+08:00" duration-ms="20934" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dec 16, 2024 - Dec 31, 2024]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Start of Billing Module Validation...]]>
@@ -197,7 +231,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- BIL01 -->
-        <test-method signature="BIL02()[pri:3, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:10 GMT+08:00" name="BIL02" finished-at="2025-01-09T16:41:10 GMT+08:00" duration-ms="20" status="PASS">
+        <test-method signature="BIL02(java.lang.String)[pri:3, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:01 GMT+08:00" name="BIL02" finished-at="2025-01-10T16:05:01 GMT+08:00" duration-ms="58" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jan 01, 2025]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (BIL02)]]>
@@ -210,7 +251,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- BIL02 -->
-        <test-method signature="BIL03()[pri:4, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:10 GMT+08:00" name="BIL03" finished-at="2025-01-09T16:41:10 GMT+08:00" duration-ms="54" status="PASS">
+        <test-method signature="BIL03()[pri:4, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:01 GMT+08:00" name="BIL03" finished-at="2025-01-10T16:05:01 GMT+08:00" duration-ms="66" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (BIL03)]]>
@@ -223,7 +264,19 @@
             </line>
           </reporter-output>
         </test-method> <!-- BIL03 -->
-        <test-method signature="BIL04()[pri:5, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:10 GMT+08:00" name="BIL04" finished-at="2025-01-09T16:41:10 GMT+08:00" duration-ms="35" status="PASS">
+        <test-method signature="BIL04(java.lang.String,java.lang.String)[pri:5, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:01 GMT+08:00" name="BIL04" finished-at="2025-01-10T16:05:01 GMT+08:00" duration-ms="43" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dec 16, 2024 - Dec 31, 2024]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dec 31, 2024]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (BIL04)]]>
@@ -239,7 +292,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- BIL04 -->
-        <test-method signature="COL01()[pri:6, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:10 GMT+08:00" name="COL01" finished-at="2025-01-09T16:41:25 GMT+08:00" duration-ms="14762" status="PASS">
+        <test-method signature="COL01(java.lang.String)[pri:6, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:01 GMT+08:00" name="COL01" finished-at="2025-01-10T16:05:19 GMT+08:00" duration-ms="17483" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dec 16, 2024 - Dec 31, 2024]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (COL01)]]>
@@ -249,6 +309,15 @@
             </line>
             <line>
               <![CDATA[Navigate to Collection Module...]]>
+            </line>
+            <line>
+              <![CDATA['Unlock' button found. Clicking to unlock...]]>
+            </line>
+            <line>
+              <![CDATA['Details' button found. Clicking to proceed...]]>
+            </line>
+            <line>
+              <![CDATA[Successfully clicked 'Details' button. Proceeding to the new tab...]]>
             </line>
             <line>
               <![CDATA[Test ID (COL01) Passed ]]>
@@ -264,7 +333,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- COL01 -->
-        <test-method signature="COL02()[pri:7, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:25 GMT+08:00" name="COL02" finished-at="2025-01-09T16:41:32 GMT+08:00" duration-ms="7091" status="PASS">
+        <test-method signature="COL02(java.lang.String)[pri:7, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:19 GMT+08:00" name="COL02" finished-at="2025-01-10T16:05:26 GMT+08:00" duration-ms="7091" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dec 16, 2024 - Dec 31, 2024]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (COL02)]]>
@@ -277,7 +353,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- COL02 -->
-        <test-method signature="COL03()[pri:8, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:32 GMT+08:00" name="COL03" finished-at="2025-01-09T16:41:34 GMT+08:00" duration-ms="2098" status="PASS">
+        <test-method signature="COL03()[pri:8, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:26 GMT+08:00" name="COL03" finished-at="2025-01-10T16:05:28 GMT+08:00" duration-ms="2067" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (COL03)]]>
@@ -293,21 +369,57 @@
             </line>
           </reporter-output>
         </test-method> <!-- COL03 -->
-        <test-method signature="AR01()[pri:9, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:34 GMT+08:00" name="AR01" finished-at="2025-01-09T16:41:37 GMT+08:00" duration-ms="3403" status="PASS">
+        <test-method signature="AR01(java.lang.String)[pri:9, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:28 GMT+08:00" name="AR01" finished-at="2025-01-10T16:05:36 GMT+08:00" duration-ms="7755" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dec 31, 2024]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Start of Test ID (AR01)]]>
             </line>
             <line>
+              <![CDATA[Navigating to Account Receivable Module...]]>
+            </line>
+            <line>
               <![CDATA[Start of Account Receivable Module Validation...]]>
+            </line>
+            <line>
+              <![CDATA[Test ID (AR01) Passed ]]>
+            </line>
+            <line>
+              <![CDATA[Statement Date is correct which is: Dec 31, 2024]]>
             </line>
           </reporter-output>
         </test-method> <!-- AR01 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTesting.BillingTestSuite16th@76505305]" started-at="2025-01-09T16:41:37 GMT+08:00" name="tearDown" finished-at="2025-01-09T16:41:37 GMT+08:00" duration-ms="140" status="PASS">
+        <test-method signature="AR02(java.lang.String)[pri:10, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:36 GMT+08:00" name="AR02" finished-at="2025-01-10T16:05:36 GMT+08:00" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dec 16, 2024 - Dec 31, 2024]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Start of Test ID (AR02)]]>
+            </line>
+            <line>
+              <![CDATA[Test ID (AR02) Passed ]]>
+            </line>
+            <line>
+              <![CDATA[Billing Period is correct which is: Dec 16, 2024 - Dec 31, 2024]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AR02 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationTesting.BillingTestSuite16th@48f2bd5b]" started-at="2025-01-10T16:05:36 GMT+08:00" name="tearDown" finished-at="2025-01-10T16:05:36 GMT+08:00" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- AutomationTesting.BillingTestSuite16th -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Billing Semi Monthly -->
+  </suite> <!-- Billing Day Test Suite -->
 </testng-results>

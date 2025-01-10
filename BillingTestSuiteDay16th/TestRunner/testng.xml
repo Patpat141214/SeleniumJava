@@ -2,6 +2,10 @@
 <suite parallel="false" name="Billing Day Test Suite">
 
   <test name="Billing Semi Monthly" preserve-order="true">>
+     <parameter name="billingPeriod" value="Dec 16, 2024 - Dec 31, 2024" />
+    <parameter name="billingDate" value="Jan 01, 2025" />
+    <parameter name="expectedSoaDate" value="Dec 31, 2024" />
+        <parameter name="statementDate" value="Dec 31, 2024" />
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th"/>
     </classes>

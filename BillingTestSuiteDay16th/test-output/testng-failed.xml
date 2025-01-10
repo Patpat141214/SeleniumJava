@@ -5,9 +5,19 @@
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
+          <include name="COL02"/>
           <include name="tearDown"/>
           <include name="COL03"/>
+          <include name="BIL04"/>
+          <include name="LI02"/>
           <include name="setUp"/>
+          <include name="LI01"/>
+          <include name="COL01"/>
+          <include name="BIL01"/>
+          <include name="BIL02"/>
+          <include name="AR02"/>
+          <include name="AR01"/>
+          <include name="BIL03"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite16th -->
     </classes>
