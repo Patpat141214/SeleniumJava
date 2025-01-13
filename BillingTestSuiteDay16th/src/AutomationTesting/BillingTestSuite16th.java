@@ -24,15 +24,14 @@ import bsh.This;
 public class BillingTestSuite16th extends SettingClass {
 	  String totalClaims; // Class-level variable for TotalClaims
 	    String formattedTotalAmount;
-	    //String billingPeriod = "Dec 16, 2024 - Dec 31, 2024" ;
-	    //String billingDate = "Jan 01, 2025";
-     	//String expectedSoaDate = "Dec 31, 2024";
+        String freeTrials;
+        String totalClaimsWithFreeFormatted;
 
-	String link = "https://manager.easyclaimsph.com";
+
 	
-	
+	@Parameters({"link"})
     @Test (priority = 0)
-    public void LI01() {
+    public void LI01(String link) {
     	Reporter.log("Start of Login Validation...)", true);
     	Reporter.log("Start of Test ID (LI01)", true);
     	Reporter.log("Navigating to URL...", true);
@@ -94,7 +93,7 @@ public class BillingTestSuite16th extends SettingClass {
     	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Billing']")).click();    	
     	
     	try {
-            Thread.sleep(5000);  // Pause for 2 seconds to wait for the page to load
+            Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -108,7 +107,7 @@ public class BillingTestSuite16th extends SettingClass {
  	   Reporter.log("Kebab Icon successfully clicked", true);
  	   
  	   try {
-	            Thread.sleep(5000);  // Pause for 2 seconds to wait for the page to load
+	            Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -132,7 +131,7 @@ public class BillingTestSuite16th extends SettingClass {
      textBox.sendKeys(Keys.ENTER);
      
      try {
-         Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+         Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
      } catch (InterruptedException e) {
          e.printStackTrace();
      }
@@ -149,7 +148,7 @@ public class BillingTestSuite16th extends SettingClass {
      
     
     try {
-        Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+        Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
     } catch (InterruptedException e) {
         e.printStackTrace();
     }
@@ -157,7 +156,7 @@ public class BillingTestSuite16th extends SettingClass {
     billingDateElement.click();
     
     try {
-        Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+        Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
     } catch (InterruptedException e) {
         e.printStackTrace();
     }
@@ -182,7 +181,7 @@ public class BillingTestSuite16th extends SettingClass {
     	   }
     	       	       	    	          
     	   try {
-    	       Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+    	       Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
     	   } catch (InterruptedException e) {
     	       e.printStackTrace();
     	   }
@@ -212,6 +211,7 @@ public class BillingTestSuite16th extends SettingClass {
     @Test (priority = 4)
     public void BIL03() {
     	Reporter.log("Start of Test ID (BIL03)", true);
+    	freeTrials = driver.findElement(By.xpath("//td[@data-field='TotalFreeClaims']")).getText();
     	totalClaims = driver.findElement(By.xpath("//td[@data-field='TotalClaims']")).getText();
     	 String serviceFee = driver.findElement(By.xpath("//td[@data-field='ServiceFee']")).getText();
     	 String totalAmount = driver.findElement(By.xpath("//td[@data-field='TotalAmount']")).getText();
@@ -232,7 +232,7 @@ public class BillingTestSuite16th extends SettingClass {
 
    	 if (totalAmount.contentEquals(formattedTotalAmount)) {
    		 Assert.assertTrue(true, "Total Amount is correct!");
-   		 Reporter.log("Total Amouns is: " + formattedTotalAmount, true);
+   		 Reporter.log("Total Amount is: " + formattedTotalAmount, true);
 	 	     Reporter.log("Test ID (BIL03) Passed ", true);
    	 }
    	 else {
@@ -257,7 +257,7 @@ public class BillingTestSuite16th extends SettingClass {
    	 if (BillingPeriod.contentEquals(billingPeriod) && soaDate.contentEquals(expectedSoaDate)) {
    		 Reporter.log("Test ID (BIL04) Passed ", true);
    		Reporter.log("Soa Date is Valid which is: " + soaDate, true);
-   		Reporter.log("End of Billing Module", true);
+   		Reporter.log("End of Billing Module Validation", true);
    		 Assert.assertTrue(true, "Soa Date is Valid!");
 	 	
    	 }
@@ -278,7 +278,7 @@ public class BillingTestSuite16th extends SettingClass {
     	Reporter.log("Navigate to Collection Module...", true);
     	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Collection']")).click();    	
     	 try {
-  	       Thread.sleep(5000);  // Pause for 7 seconds to wait for the page to load
+  	       Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
   	   } catch (InterruptedException e) {
   	       e.printStackTrace();
   	   }
@@ -289,7 +289,7 @@ public class BillingTestSuite16th extends SettingClass {
     	 kebabIcon.click();
     	 
     	 try {
-	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -305,7 +305,7 @@ public class BillingTestSuite16th extends SettingClass {
           textBox.sendKeys(Keys.ENTER);
           
           try {
-  	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+  	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
   	        } catch (InterruptedException e) {
   	            e.printStackTrace();
   	        }
@@ -324,7 +324,7 @@ public class BillingTestSuite16th extends SettingClass {
            	unlockBtn.click();
            	
            try {
-               Thread.sleep(2000); // Wait for the button to change state
+               Thread.sleep(3000); // Wait for the button to change state
            } catch (InterruptedException e) {
                e.printStackTrace();
            }
@@ -392,14 +392,14 @@ public class BillingTestSuite16th extends SettingClass {
     	driver.findElement(By.xpath("//span[@class='k-link' and text()='Payment']")).click();
 
     	 try {
-	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
     	 
     	 driver.findElement(By.xpath("//button[contains(@class, 'k-button') and contains(@class, 'k-primary') and contains(@onclick, 'addPaymentWindow')]")).click();
     	 try {
-	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -429,7 +429,7 @@ public class BillingTestSuite16th extends SettingClass {
                                 
          driver.switchTo().defaultContent();   	
     	 try {
-	            Thread.sleep(2000);  // Pause for 5 seconds to wait for the page to load
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -450,7 +450,7 @@ public class BillingTestSuite16th extends SettingClass {
     	   if (balanceFormattedText.contentEquals(this.formattedTotalAmount)) {
          		 Reporter.log("Test ID (COL03) Passed ", true);
          	   		Reporter.log("Current Balance is correct which is: " + balanceFormattedText , true);        	
-         	   	Reporter.log("End of Collection Module", true);
+         	   	Reporter.log("End of Collection Module Validation", true);
          	   		Assert.assertTrue(true, "Current Balance is correct!");
            }else {
         	   Reporter.log("Test ID (COL03) Failed ", true);
@@ -462,7 +462,7 @@ public class BillingTestSuite16th extends SettingClass {
     	  
     	       	    	      	  
     	 try {
-	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -497,7 +497,7 @@ public class BillingTestSuite16th extends SettingClass {
  	 kebabIcon.click();
  	 
  	 try {
-	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -513,7 +513,7 @@ public class BillingTestSuite16th extends SettingClass {
        textBox.sendKeys(Keys.ENTER);
        
        try {
-	            Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
@@ -550,6 +550,217 @@ public class BillingTestSuite16th extends SettingClass {
        
     }
     
+    @Test (priority = 10)
+    public void AR03() {
+    	Reporter.log("Start of Test ID (AR03)", true);    
+    	     	    
+    	String getAmountDue = driver.findElement(By.xpath("//td[@data-field='TotalAmount' and text()='"+this.formattedTotalAmount+"']")).getText();
+
+    	if (this.formattedTotalAmount.contentEquals(getAmountDue)) {
+      		 Reporter.log("Test ID (AR03) Passed ", true);
+      	   		Reporter.log("Total Amount in Billing : " + this.formattedTotalAmount , true);    
+      	   	Reporter.log("Total Amount in Account Receivable: " + getAmountDue , true);     
+      		Reporter.log("End of Account Receivable Validation " + getAmountDue , true);     
+      	   		Assert.assertTrue(true, "Both Total Amount is correct");
+      	   		
+        }else {
+     	   Reporter.log("Test ID (AR03) Failed ", true);
+     	   Assert.fail();
+      	  
+        }
+    	
+     
+    }
+    
+    @Parameters({"billingPeriod"})
+    @Test (priority = 11)
+    public void SOA01(String billingPeriod) {
+    	Reporter.log("Start of Test ID (SOA01)", true);    
+    	Reporter.log("Navigating to Statement of Account...", true);    
+    	Reporter.log("Start of Statement of Account Validation...", true);
+    	
+    	WebElement navReportsSOA = driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Statement Of Account']"));
+    	navReportsSOA.click();
+    	
+    	 try {
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+    	
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	
+	 	   WebElement kebabIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/div[2]/div/div/div[3]/div[3]/div[2]/div/table/thead/tr/th[1]/a[1]/span")));
+	 
+	 kebabIcon.click();
+	 
+	 try {
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	 	   
+	 WebElement hoverFilter = driver.findElement(By.xpath("/html/body/div[7]/div/ul/li[6]/span"));
+	   
+	   Actions actions1 = new Actions(driver);
+    actions1.moveToElement(hoverFilter).perform();
+    
+    WebElement textBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[7]/div/ul/li[6]/div/ul/li/div/form/div/input")));
+    
+    textBox.sendKeys("H03021076");
+    textBox.sendKeys(Keys.ENTER);
+    
+    try {
+	            Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+    	
+    	
+    	
+    	String getBillingPeriod = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='"+billingPeriod+"']")).getText();
+
+    	if (billingPeriod.contentEquals(getBillingPeriod)) {
+      		 Reporter.log("Test ID (SOA01) Passed ", true);
+      		Reporter.log("Billing Period is correct which is: " + getBillingPeriod , true);        	  
+      	   		Assert.assertTrue(true, "Billing Period is Correct");
+      	   		
+        }else {
+     	   Reporter.log("Test ID (SOA01) Failed ", true);
+     	   Assert.fail();
+      	  
+        }
+    
+}
+    
+    @Parameters({"billingDate"}) 
+    @Test (priority = 12)
+    public void SOA02(String billingDate) {
+    	Reporter.log("Start of Test ID (SOA02)", true);    
+    	     	    
+    	String getBillingDate = driver.findElement(By.xpath("//td[@data-field='BillingDate' and text()='"+billingDate+"']")).getText();
+
+    	if (billingDate.contentEquals(getBillingDate)) {
+      		 Reporter.log("Test ID (SOA02) Passed ", true);
+      	   		Reporter.log("Billing Date is correct which is: " + getBillingDate, true);    
+      	   	   
+      	   		Assert.assertTrue(true, "Billing Date is Correct");
+      	   		
+        }else {
+     	   Reporter.log("Test ID (SOA02) Failed ", true);
+     	   Assert.fail();
+      	  
+        }
+    	
+     
+    }
+    
+    @Test (priority = 13)
+    public void SOA3() {
+    	Reporter.log("Start of Test ID (SOA03)", true);    
+    	     	    
+    	String getTotalClaims = driver.findElement(By.xpath("//td[@data-field='TotalClaims']")).getText();
+         
+    	   	
+    	if (this.totalClaims.replace(".00","").contentEquals(getTotalClaims)) {
+     		 Reporter.log("Test ID (SOA03) Passed ", true);
+     	   		Reporter.log("Total Claims is correct which is: " + getTotalClaims, true);         	   	   
+     	   		Assert.assertTrue(true, "Total Claims is Correct");
+     	   		
+       }else {
+    	   Reporter.log("Test ID (SOA03) Failed ", true);
+    	   Assert.fail();
+     	  
+       }
+     
+    }
+    
+    @Parameters({"billingPeriod"})
+    @Test (priority = 14)
+    public void SOA4(String billingPeriod) {
+    	Reporter.log("Start of Test ID (SOA04)", true);    
+    	     	    
+    	WebElement navSoaReport = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='" + billingPeriod + "']//following-sibling::td//a[@class='k-button k-button-icontext k-grid-report' and text()='SOA']"));
+         
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", navSoaReport);
+
+
+    	navSoaReport.click();
+    	
+    	 try {
+             Thread.sleep(7000);  // Pause for 7 seconds to wait for the page to load
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+    	 driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='k-content-frame']")));
+    	 
+    	 try {
+             Thread.sleep(2000);  // Pause for 2 seconds to wait for the page to load
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+    	 driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='ReportsViewerReportFrame']")));
+    	 
+
+
+    	 
+    	 WebElement reportDiv = driver.findElement(By.xpath("//div[contains(text(), 'STATEMENT OF ACCOUNT')]"));
+    	 if (reportDiv.isDisplayed()) {
+    		 
+    		    Reporter.log("Successfully navigated to the report page.", true);
+    		    Assert.assertTrue(true, "Navigated to the Report");
+    		} else {
+    		    Reporter.log("Failed to navigate to the report page.", true);
+    		    Assert.fail();
+    		}
+    	
+    }
+    
+    @Parameters({"billingPeriod"})
+    @Test (priority = 15)
+    public void SOA5(String billingPeriod) {
+    	Reporter.log("Start of Test ID (SOA05)", true);    
+    	     	    
+    	String navSoaReportBillingPeriod = driver.findElement(By.xpath("//div[contains(text(), '"+billingPeriod+"')]")).getText();
+         
+        Reporter.log(navSoaReportBillingPeriod, true);
+    
+       	
+    	if (billingPeriod.contentEquals(navSoaReportBillingPeriod)) {
+     		 Reporter.log("Test ID (SOA05) Passed ", true);
+     	   		Reporter.log("Billing Period is valid which is: " + navSoaReportBillingPeriod, true);         	   	   
+     	   		Assert.assertTrue(true, "Billing Period is Correct");
+     	   		
+       }else {
+    	   Reporter.log("Test ID (SOA05) Failed ", true);
+    	   Assert.fail();
+     	  
+       }
+        
+
+        
+}
+    @Test (priority = 16)
+    public void SOA6() {
+    	Reporter.log("Start of Test ID (SOA06)", true);
+   
+    	     	    
+    	String getTotalClaims = driver.findElement(By.xpath("//div[contains(text(), '"+this.totalClaims.replace(".00","")+"')]")).getText();
+        
+    	double totalClaims = Double.parseDouble(getTotalClaims);
+    	
+    	double FreeTrial = Double.parseDouble(this.freeTrials);
+	
+    	double TotalClaimsWithFree = totalClaims - FreeTrial;
+    	
+    	totalClaimsWithFreeFormatted = String.format("%,.0f",TotalClaimsWithFree);
+    	
+    	
+    	
+        driver.switchTo().defaultContent();
+     
+    }
 }
     
     

@@ -6,6 +6,7 @@
     <parameter name="billingDate" value="Jan 01, 2025" />
     <parameter name="expectedSoaDate" value="Dec 31, 2024" />
         <parameter name="statementDate" value="Dec 31, 2024" />
+        <parameter name="link" value="https://manager.easyclaimsph.com" />
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th"/>
     </classes>

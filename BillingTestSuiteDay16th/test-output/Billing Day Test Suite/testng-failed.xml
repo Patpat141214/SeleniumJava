@@ -4,17 +4,15 @@
   <test thread-count="5" name="Billing Semi Monthly(failed)">
     <parameter name="billingDate" value="Jan 01, 2025"/>
     <parameter name="billingPeriod" value="Dec 16, 2024 - Dec 31, 2024"/>
+    <parameter name="link" value="https://manager.easyclaimsph.com"/>
     <parameter name="statementDate" value="Dec 31, 2024"/>
     <parameter name="expectedSoaDate" value="Dec 31, 2024"/>
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
-          <include name="COL02" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="COL03"/>
           <include name="setUp"/>
-          <include name="AR01" invocation-numbers="0"/>
-          <include name="COL01" invocation-numbers="0"/>
+          <include name="SOA6"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite16th -->
     </classes>

@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Billing Day Test Suite]">
+  <test thread-count="5" name="Billing Semi Monthly(failed)">
+    <parameter name="billingDate" value="Jan 01, 2025"/>
+    <parameter name="billingPeriod" value="Dec 16, 2024 - Dec 31, 2024"/>
+    <parameter name="link" value="https://manager.easyclaimsph.com"/>
+    <parameter name="statementDate" value="Dec 31, 2024"/>
+    <parameter name="expectedSoaDate" value="Dec 31, 2024"/>
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
-          <include name="COL02"/>
           <include name="tearDown"/>
-          <include name="COL03"/>
-          <include name="BIL04"/>
-          <include name="LI02"/>
           <include name="setUp"/>
-          <include name="LI01"/>
-          <include name="COL01"/>
-          <include name="BIL01"/>
-          <include name="BIL02"/>
-          <include name="AR02"/>
-          <include name="AR01"/>
-          <include name="BIL03"/>
+          <include name="SOA6"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite16th -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Billing Semi Monthly(failed) -->
+</suite> <!-- Failed suite [Billing Day Test Suite] -->
