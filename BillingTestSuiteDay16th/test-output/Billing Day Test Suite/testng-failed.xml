@@ -11,8 +11,9 @@
       <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
           <include name="tearDown"/>
+          <include name="SOA01" invocation-numbers="0"/>
+          <include name="SOA12"/>
           <include name="setUp"/>
-          <include name="SOA6"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite16th -->
     </classes>

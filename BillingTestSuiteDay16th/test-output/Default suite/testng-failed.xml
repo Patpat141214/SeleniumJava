@@ -5,26 +5,32 @@
     <classes>
       <class name="AutomationTesting.BillingTestSuite16th">
         <methods>
-          <include name="COL02"/>
+          <include name="SOA8"/>
           <include name="tearDown"/>
           <include name="SOA5"/>
-          <include name="COL03"/>
-          <include name="BIL04"/>
+          <include name="SOA7"/>
           <include name="SOA02"/>
+          <include name="SOA9"/>
           <include name="SOA01"/>
           <include name="LI02"/>
           <include name="setUp"/>
           <include name="LI01"/>
-          <include name="COL01"/>
           <include name="SOA6"/>
+          <include name="SOA4"/>
+          <include name="SOA3"/>
+          <include name="COL02"/>
+          <include name="SOA11"/>
+          <include name="COL03"/>
+          <include name="BIL04"/>
+          <include name="SOA10"/>
+          <include name="SOA12"/>
+          <include name="COL01"/>
           <include name="BIL01"/>
           <include name="BIL02"/>
           <include name="AR02"/>
           <include name="AR01"/>
           <include name="BIL03"/>
-          <include name="SOA4"/>
           <include name="AR03"/>
-          <include name="SOA3"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite16th -->
     </classes>
