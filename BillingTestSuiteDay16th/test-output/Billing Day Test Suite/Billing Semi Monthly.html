@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Billing Semi Monthly</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>22/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 15 16:20:26 GMT+08:00 2025</td>
+<td>Started on:</td><td>Mon Jan 20 16:53:43 GMT+08:00 2025</td>
 </tr>
-<tr><td>Total time:</td><td>114 seconds (114470 ms)</td>
+<tr><td>Total time:</td><td>115 seconds (115770 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,145 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA12()'><b>SOA12</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1654589039" onClick='toggleBox("Output-1654589039", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1654589039" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1654589039">
-Start of Test ID (SOA12)<br/>
-</div>
-</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.replace(java.lang.CharSequence, java.lang.CharSequence)&quot; because &quot;this.amountDue&quot; is null
-	at AutomationTesting.BillingTestSuite16th.SOA12(BillingTestSuite16th.java:1024)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1654589039", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1654589039'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.replace(java.lang.CharSequence, java.lang.CharSequence)&quot; because &quot;this.amountDue&quot; is null
-	at AutomationTesting.BillingTestSuite16th.SOA12(BillingTestSuite16th.java:1024)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA01()'><b>SOA01</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024<br/>
-<a href="#Output-2123846943" onClick='toggleBox("Output-2123846943", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2123846943" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2123846943">
-Start of Test ID (SOA01)<br/>
-Navigating to Statement of Account...<br/>
-Start of Statement of Account Validation...<br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@data-field=&apos;TotalAmountDue&apos;][2]&quot;}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0dc957aa945100a776d5cbaf29cd59bb, findElement {using=xpath, value=//td[@data-field=&apos;TotalAmountDue&apos;][2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\pfeniza\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50418/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0dc957aa945100a776d5cbaf29cd59bb
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at AutomationTesting.BillingTestSuite16th.SOA01(BillingTestSuite16th.java:705)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2123846943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2123846943'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@data-field=&apos;TotalAmountDue&apos;][2]&quot;}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0dc957aa945100a776d5cbaf29cd59bb, findElement {using=xpath, value=//td[@data-field=&apos;TotalAmountDue&apos;][2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\pfeniza\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50418/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0dc957aa945100a776d5cbaf29cd59bb
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at AutomationTesting.BillingTestSuite16th.SOA01(BillingTestSuite16th.java:705)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>9</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -214,302 +75,102 @@ Session ID: 0dc957aa945100a776d5cbaf29cd59bb
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.AR02()'><b>AR02</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024<br/>
-<a href="#Output-2146613458" onClick='toggleBox("Output-2146613458", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL04()'><b>BIL04</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025, Jan 16, 2025<br/>
+<a href="#Output-14124949" onClick='toggleBox("Output-14124949", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2146613458" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2146613458">
-Start of Test ID (AR02)<br/>
-Test ID (AR02) Passed <br/>
-Billing Period is correct which is: Dec 16, 2024 - Dec 31, 2024<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.BIL03()'><b>BIL03</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1928621590" onClick='toggleBox("Output-1928621590", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1928621590" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1928621590">
-Start of Test ID (BIL03)<br/>
-Total Amount is: Php 1,250.00<br/>
-Test ID (BIL03) Passed <br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA7()'><b>SOA7</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-2079278380" onClick='toggleBox("Output-2079278380", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2079278380" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2079278380">
-Start of Test ID (SOA07)<br/>
-Test ID (SOA07) Passed <br/>
-Total Claims: 125.00<br/>
-Service Fee: 10.00<br/>
-Total Claims * Service Fee: ₱ 1,250.00<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA4()'><b>SOA4</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024<br/>
-<a href="#Output-1500588149" onClick='toggleBox("Output-1500588149", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1500588149" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1500588149">
-Start of Test ID (SOA04)<br/>
-Successfully navigated to the report page.<br/>
-</div>
-</td>
-<td></td>
-<td>9</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA5()'><b>SOA5</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024<br/>
-<a href="#Output-296204898" onClick='toggleBox("Output-296204898", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-296204898" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-296204898">
-Start of Test ID (SOA05)<br/>
-Dec 16, 2024 - Dec 31, 2024<br/>
-Test ID (SOA05) Passed <br/>
-Billing Period is valid which is: Dec 16, 2024 - Dec 31, 2024<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.AR01()'><b>AR01</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 31, 2024<br/>
-<a href="#Output-1264701638" onClick='toggleBox("Output-1264701638", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1264701638" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1264701638">
-Start of Test ID (AR01)<br/>
-Navigating to Account Receivable Module...<br/>
-Start of Account Receivable Module Validation...<br/>
-Test ID (AR01) Passed <br/>
-Statement Date is correct which is: Dec 31, 2024<br/>
-</div>
-</td>
-<td></td>
-<td>9</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA02()'><b>SOA02</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Jan 01, 2025<br/>
-<a href="#Output-858727880" onClick='toggleBox("Output-858727880", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-858727880" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-858727880">
-Start of Test ID (SOA02)<br/>
-Test ID (SOA02) Passed <br/>
-Billing Date is correct which is: Jan 01, 2025<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.COL01()'><b>COL01</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024, Dec 31, 2024<br/>
-<a href="#Output-105751207" onClick='toggleBox("Output-105751207", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-105751207" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-105751207">
-Start of Test ID (COL01)<br/>
-Start of Collection Module Validation...<br/>
-Navigate to Collection Module...<br/>
-'Unlock' button found. Clicking to unlock...<br/>
-'Details' button found. Clicking to proceed...<br/>
-Successfully clicked 'Details' button. Proceeding to the new tab...<br/>
-Test ID (COL01) Passed <br/>
-Billing Period is Valid which is: Dec 16, 2024 - Dec 31, 2024<br/>
-Total Claims is Valid which is: 125<br/>
-Total Amount is Valid which is: PHP 1,250.00<br/>
-</div>
-</td>
-<td></td>
-<td>42</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.COL02()'><b>COL02</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024<br/>
-<a href="#Output-1574573264" onClick='toggleBox("Output-1574573264", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1574573264" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1574573264">
-Start of Test ID (COL02)<br/>
-Test ID (COL02) Passed <br/>
-Billing Period is Valid which is: DEC 16, 2024 - DEC 31, 2024<br/>
-</div>
-</td>
-<td></td>
-<td>10</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA10()'><b>SOA10</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1800959603" onClick='toggleBox("Output-1800959603", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1800959603" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1800959603">
-Start of Test ID (SOA10)<br/>
-Test ID (SOA10) Passed <br/>
-Vatable Sales: ₱ 1,116.07<br/>
-Value Added Tax: ₱ 133.93<br/>
-Current Amount Due: ₱ 1,250.00<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA6()'><b>SOA6</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1145302895" onClick='toggleBox("Output-1145302895", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1145302895" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1145302895">
-Start of Test ID (SOA06)<br/>
-Test ID (SOA06) Passed <br/>
-Total of Free trial claims: 0.0<br/>
-Total Claims without free trial: 125.0<br/>
-Total Claims that deducted free trial: 125<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.AR03()'><b>AR03</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-56510351" onClick='toggleBox("Output-56510351", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-56510351" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-56510351">
-Start of Test ID (AR03)<br/>
-Test ID (AR03) Passed <br/>
-Total Amount in Billing : Php 1,250.00<br/>
-Total Amount in Account Receivable: Php 1,250.00<br/>
-End of Account Receivable Validation Php 1,250.00<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA3()'><b>SOA3</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1738561265" onClick='toggleBox("Output-1738561265", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1738561265" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1738561265">
-Start of Test ID (SOA03)<br/>
-Test ID (SOA03) Passed <br/>
-Total Claims is correct which is: 125<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA8()'><b>SOA8</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-145105559" onClick='toggleBox("Output-145105559", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-145105559" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-145105559">
-Start of Test ID (SOA08)<br/>
-Test ID (SOA08) Passed <br/>
-Total Amount: 1250.0<br/>
-Total Amount / 1.12: ₱ 1,116.07<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
-<tr>
-<td title='AutomationTesting.BillingTestSuite16th.BIL04()'><b>BIL04</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024, Dec 31, 2024<br/>
-<a href="#Output-925803196" onClick='toggleBox("Output-925803196", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-925803196" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-925803196">
+<a href="#Output-14124949" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-14124949">
 Start of Test ID (BIL04)<br/>
 Test ID (BIL04) Passed <br/>
-Soa Date is Valid which is: Dec 31, 2024<br/>
+Soa Date is Valid which is: Jan 16, 2025<br/>
 End of Billing Module Validation<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.BIL02()'><b>BIL02</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Jan 01, 2025<br/>
-<a href="#Output-1908781622" onClick='toggleBox("Output-1908781622", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.AR01()'><b>AR01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 16, 2025, H10015407<br/>
+<a href="#Output-684230144" onClick='toggleBox("Output-684230144", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1908781622" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1908781622">
+<a href="#Output-684230144" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-684230144">
+Start of Test ID (AR01)<br/>
+Navigating to Account Receivable Module...<br/>
+Start of Account Receivable Module Validation...<br/>
+Test ID (AR01) Passed <br/>
+Statement Date is correct which is: Jan 16, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL02()'><b>BIL02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 16, 2025<br/>
+<a href="#Output-261845810" onClick='toggleBox("Output-261845810", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-261845810" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-261845810">
 Start of Test ID (BIL02)<br/>
 Test ID (BIL02) Passed <br/>
-Billing Date is Valid which is: Jan 01, 2025<br/>
+Billing Date is Valid which is: Jan 16, 2025<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA9()'><b>SOA9</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-841483227" onClick='toggleBox("Output-841483227", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL03()'><b>BIL03</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1175418534" onClick='toggleBox("Output-1175418534", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-841483227" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-841483227">
-Start of Test ID (SOA09)<br/>
-Test ID (SOA09) Passed <br/>
-Vatable Sales: 1116.07<br/>
-Vatable Sales * 0.12: ₱ 133.93<br/>
+<a href="#Output-1175418534" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1175418534">
+Start of Test ID (BIL03)<br/>
+Total Amount is: Php 150.00<br/>
+Test ID (BIL03) Passed <br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.BIL01()'><b>BIL01</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: Dec 16, 2024 - Dec 31, 2024<br/>
-<a href="#Output-142099757" onClick='toggleBox("Output-142099757", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL01()'><b>BIL01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025, H10015407<br/>
+<a href="#Output-1731295355" onClick='toggleBox("Output-1731295355", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-142099757" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-142099757">
+<a href="#Output-1731295355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1731295355">
 Start of Billing Module Validation...<br/>
 Navigate to Billing Module...<br/>
 Kebab Icon successfully clicked<br/>
 Navigating to Hospital...<br/>
 Start of Test ID (BIL01)<br/>
 Test ID (BIL01) Passed <br/>
-Billing Period is Valid which is: Dec 16, 2024 - Dec 31, 2024<br/>
+Billing Period is Valid which is: Jan 01, 2025 - Jan 15, 2025<br/>
 </div>
 </td>
 <td></td>
 <td>24</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.COL03()'><b>COL03</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1346354118" onClick='toggleBox("Output-1346354118", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.AR02()'><b>AR02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025<br/>
+<a href="#Output-559998250" onClick='toggleBox("Output-559998250", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1346354118" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1346354118">
-Start of Test ID (COL03)<br/>
-Test ID (COL03) Passed <br/>
-Current Balance is correct which is: Php 1,250.00<br/>
-End of Collection Module Validation<br/>
+<a href="#Output-559998250" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-559998250">
+Start of Test ID (AR02)<br/>
+Test ID (AR02) Passed <br/>
+Billing Period is correct which is: Jan 01, 2025 - Jan 15, 2025<br/>
 </div>
 </td>
 <td></td>
-<td>3</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.LI02()'><b>LI02</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1658512704" onClick='toggleBox("Output-1658512704", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.LI02()'><b>LI02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1523649562" onClick='toggleBox("Output-1523649562", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1658512704" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1658512704">
+<a href="#Output-1523649562" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1523649562">
 Start of Test ID (LI02)<br/>
 Inputting Valid Credential<br/>
 Test ID (LI02) Passed <br/>
@@ -518,13 +179,54 @@ End of Login Validation!<br/>
 </td>
 <td></td>
 <td>1</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.LI01()'><b>LI01</b><br>Test class: AutomationTesting.BillingTestSuite16th<br>Parameters: https://manager.easyclaimsph.com<br/>
-<a href="#Output-735228558" onClick='toggleBox("Output-735228558", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.COL03()'><b>COL03</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-220432328" onClick='toggleBox("Output-220432328", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-735228558" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-735228558">
+<a href="#Output-220432328" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-220432328">
+Start of Test ID (COL03)<br/>
+Test ID (COL03) Passed <br/>
+Current Balance is correct which is: Php 150.00<br/>
+End of Collection Module Validation<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.COL02()'><b>COL02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025<br/>
+<a href="#Output-1658785779" onClick='toggleBox("Output-1658785779", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1658785779" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1658785779">
+Start of Test ID (COL02)<br/>
+Test ID (COL02) Passed <br/>
+Billing Period is Valid which is: JAN 01, 2025 - JAN 15, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS02()'><b>BS02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1312348533" onClick='toggleBox("Output-1312348533", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1312348533" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1312348533">
+Start of Test ID (BS02)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.LI01()'><b>LI01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: https://manager.easyclaimsph.com<br/>
+<a href="#Output-192456457" onClick='toggleBox("Output-192456457", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-192456457" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-192456457">
 Start of Login Validation...)<br/>
 Start of Test ID (LI01)<br/>
 Navigating to URL...<br/>
@@ -534,20 +236,60 @@ Test ID (LI01) Passed <br/>
 </td>
 <td></td>
 <td>1</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 <tr>
-<td title='AutomationTesting.BillingTestSuite16th.SOA11()'><b>SOA11</b><br>Test class: AutomationTesting.BillingTestSuite16th<br/>
-<a href="#Output-1292570580" onClick='toggleBox("Output-1292570580", this, "Show output", "Hide output");'>Show output</a>
+<td title='AutomationTesting.BillingTestSuite30th31st.AR03()'><b>AR03</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1124317168" onClick='toggleBox("Output-1124317168", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1292570580" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1292570580">
-Start of Test ID (SOA11)<br/>
-Test ID (SOA11) Passed <br/>
+<a href="#Output-1124317168" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1124317168">
+Start of Test ID (AR03)<br/>
+Test ID (AR03) Passed <br/>
+Total Amount in Billing : Php 150.00<br/>
+Total Amount in Account Receivable: Php 150.00<br/>
+End of Account Receivable Validation Php 150.00<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>AutomationTesting.BillingTestSuite16th@77888435</td></tr>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS01()'><b>BS01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Dec 31, 2024, H10015407<br/>
+<a href="#Output-1590481849" onClick='toggleBox("Output-1590481849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1590481849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1590481849">
+Start of Test ID (BS01)<br/>
+Navigating to Billing Statement Module...<br/>
+Start of Billing Statement Validation...<br/>
+Test ID (BS01) Passed <br/>
+Date Issued: Dec 31, 2024<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.COL01()'><b>COL01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025, H10015407, Jan 16, 2025<br/>
+<a href="#Output-515520300" onClick='toggleBox("Output-515520300", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-515520300" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-515520300">
+Start of Test ID (COL01)<br/>
+Start of Collection Module Validation...<br/>
+Navigate to Collection Module...<br/>
+'Unlock' button found. Clicking to unlock...<br/>
+'Details' button found. Clicking to proceed...<br/>
+Successfully clicked 'Details' button. Proceeding to the new tab...<br/>
+Test ID (COL01) Passed <br/>
+Billing Period is Valid which is: Jan 01, 2025 - Jan 15, 2025<br/>
+Total Claims is Valid which is: 15<br/>
+Total Amount is Valid which is: PHP 150.00<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>AutomationTesting.BillingTestSuite30th31st@1bb5a082</td></tr>
 </table><p>
 </body>
 </html>

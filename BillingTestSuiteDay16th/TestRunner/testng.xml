@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >                                                                                                             
 <suite parallel="false" name="Billing Day Test Suite">
 
-  <test name="Billing Semi Monthly" preserve-order="true">>
-     <parameter name="billingPeriod" value="Dec 16, 2024 - Dec 31, 2024" />
-    <parameter name="billingDate" value="Jan 01, 2025" />
-    <parameter name="expectedSoaDate" value="Dec 31, 2024" />
-        <parameter name="statementDate" value="Dec 31, 2024" />
+  <test name="Billing Semi Monthly" preserve-order="true">
+     <parameter name="billingPeriod" value="Jan 01, 2025 - Jan 15, 2025" />
+    <parameter name="billingDate" value="Jan 16, 2025" />
+    <parameter name="expectedSoaDate" value="Jan 16, 2025" />
+        <parameter name="statementDate" value="Jan 16, 2025" />
         <parameter name="link" value="https://manager.easyclaimsph.com" />
+        <parameter name="link2" value="https://manager.easyclaimsph.com/SOA" /> 
+        <parameter name="Hospital" value="H10015407" /> 
+        <parameter name="billingStatement" value="Dec 31, 2024" /> 
+        
     <classes>
-      <class name="AutomationTesting.BillingTestSuite16th"/>
+      <class name="AutomationTesting.BillingTestSuite30th31st"/>
     </classes>
   </test> <!-- Test -->
  
