@@ -29,7 +29,9 @@ public class BillingTestSuite30th31st extends SettingClass {
      String allCurrentBalance;
      String formattedAllCurrentBalance;
      double totalBalance = 0.0;
-     
+     String billingValue;
+     String billingValue1;
+     String formattedTotalBilValue;
 
 	
 	@Parameters({"link"})
@@ -88,9 +90,9 @@ public class BillingTestSuite30th31st extends SettingClass {
 }
  
  
- @Parameters({"billingPeriod", "Hospital"})
+ @Parameters({"billingPeriod", "Hospital", "billingPeriodForMonthly", "billingPeriodForMonthly1"})
  @Test (priority = 2)
- public void BIL01(String billingPeriod, String Hospital) {
+ public void BIL01(String billingPeriod, String Hospital, String billingPeriodForMonthly, String billingPeriodForMonthly1 ) {
  	Reporter.log("Start of Billing Module Validation...", true);
  	Reporter.log("Navigate to Billing Module...", true);
  	driver.findElement(By.xpath("//span[@class='flex-grow commandbar-item-text' and text()='Billing']")).click();    	
@@ -151,7 +153,7 @@ public class BillingTestSuite30th31st extends SettingClass {
   
  
  try {
-     Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
+     Thread.sleep(3000);  // Pause for 5 seconds to wait for the page to load
  } catch (InterruptedException e) {
      e.printStackTrace();
  }
@@ -164,12 +166,29 @@ public class BillingTestSuite30th31st extends SettingClass {
      e.printStackTrace();
  }
  
+ billingValue = driver.findElement(By.xpath("//tr[td[@data-field='BillingPeriod' and text()='" + billingPeriodForMonthly + "']]/td[@data-field='TotalAmount']")).getText();
+ 
+ double bilValue = Double.parseDouble(billingValue.replace("Php", "").trim().replace(",", ""));
+
+ 
+billingValue1 = driver.findElement(By.xpath("//tr[td[@data-field='BillingPeriod' and text()='" + billingPeriodForMonthly1 + "']]/td[@data-field='TotalAmount']")).getText();
+ 
+ double bilValue1 = Double.parseDouble(billingValue1.replace("Php", "").trim().replace(",", ""));
+ 
+ double totalBilValue = bilValue + bilValue1;
+ 
+ formattedTotalBilValue = "₱ " + String.format("%,.2f", totalBilValue);
+ 
+ 
+ 
  
  	
  	Reporter.log("Start of Test ID (BIL01)", true);
  	
  	String BillingPeriod = driver.findElement(By.xpath("//td[@data-field='BillingPeriod' and text()='"+billingPeriod+"']")).getText(); //Need to Change base on billing execution
- 	       	       	        	     	   
+ 	       	       	      
+ 	System.out.println(formattedTotalBilValue);
+ 	
  	   if (BillingPeriod.contentEquals(billingPeriod)){   	 
  	 	 Reporter.log("Test ID (BIL01) Passed ", true);
  	 	Reporter.log("Billing Period is Valid which is: " + BillingPeriod, true);
@@ -344,6 +363,8 @@ public class BillingTestSuite30th31st extends SettingClass {
       formattedAllCurrentBalance = "₱ " + String.format("%,.2f", totalBalance);
      
       
+      
+       System.out.println(this.formattedAllCurrentBalance + " " + this.serviceFee);
        driver.switchTo().defaultContent();
        
        try {
@@ -748,14 +769,13 @@ try {
  if (BillingStatement.contentEquals(billingStatement)) {
 		 Reporter.log("Test ID (BS01) Passed ", true);
 	   	Reporter.log("Date Issued: " + BillingStatement , true);     
-	   		Assert.assertTrue(true, "Date Issued is correct");
-	   		
- }else {
+	   		Assert.assertTrue(true, "Date Issued is correct");	   		
+ }
+ else {
 	   Reporter.log("Test ID (BS01) Failed ", true);
 	   Assert.fail();
-	  
- }
-
+ 	  
+   }
  
  }
  
@@ -772,11 +792,30 @@ try {
  	 viewBillingStatement.click();
 
  	try {
-	    Thread.sleep(5000);  // Pause for 5 seconds to wait for the page to load
+	    Thread.sleep(3000);  // Pause for 3 seconds to wait for the page to load
 	} catch (InterruptedException e) {
 	    e.printStackTrace();
 	}
+ 	
+ 	 driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='k-content-frame']")));
  	 
+ 	 driver.switchTo().frame(driver.findElement(By.id("ReportsViewerReportFrame")));
+ 	
+ 	String billingValue = driver.findElement(By.xpath("//div[text()='"+this.formattedTotalBilValue+"']")).getText();
+ 	
+ 	if (billingValue.contentEquals(this.formattedTotalBilValue)) {
+ 		
+ 		 Reporter.log("Test ID (BS02) Passed ", true);
+ 	   	Reporter.log("Has Billing" , true);     
+ 	   		Assert.assertTrue(true, "Has Billing");
+ 		
+ 	}else if(billingValue.contentEquals("₱ 0.00")){
+ 		 Reporter.log("Test ID (BS02) Passed ", true);
+  	   	Reporter.log("No Billing" , true);     
+  	   		Assert.assertTrue(true, "No Billing");
+ 	}
+ 	
+ 	 driver.switchTo().defaultContent();
 
  }
  

@@ -3,6 +3,8 @@
 <suite parallel="false" name="Billing Day Test Suite">
 
   <test name="Billing Semi Monthly" preserve-order="true">
+    <parameter name="billingPeriodForMonthly" value="Dec 01, 2024 - Dec 15, 2024" />
+    <parameter name="billingPeriodForMonthly1" value="Dec 16, 2024 - Dec 31, 2024" />
      <parameter name="billingPeriod" value="Jan 01, 2025 - Jan 15, 2025" />
     <parameter name="billingDate" value="Jan 16, 2025" />
     <parameter name="expectedSoaDate" value="Jan 16, 2025" />

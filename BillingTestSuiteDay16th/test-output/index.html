@@ -119,7 +119,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Billing_Day_Test_Suite" title="AutomationTesting.BillingTestSuite30th31st" class="method navigator-link" hash-for-method="BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407)">BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Billing_Day_Test_Suite" title="AutomationTesting.BillingTestSuite30th31st" class="method navigator-link" hash-for-method="BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024)">BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -215,10 +215,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407)">
-                  </a> <!-- BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407) -->
+                  <a name="BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024)">
+                  </a> <!-- BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024) -->
                   <span class="method-name">BIL01</span>
-                  <span class="parameters">(Jan 01, 2025 - Jan 15, 2025, H10015407)</span>
+                  <span class="parameters">(Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -311,8 +311,10 @@
 &lt;suite name=&quot;Billing Day Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Billing Semi Monthly&quot;&gt;
     &lt;parameter name=&quot;billingStatement&quot; value=&quot;Dec 31, 2024&quot;/&gt;
+    &lt;parameter name=&quot;billingPeriodForMonthly1&quot; value=&quot;Dec 16, 2024 - Dec 31, 2024&quot;/&gt;
     &lt;parameter name=&quot;billingDate&quot; value=&quot;Jan 16, 2025&quot;/&gt;
     &lt;parameter name=&quot;billingPeriod&quot; value=&quot;Jan 01, 2025 - Jan 15, 2025&quot;/&gt;
+    &lt;parameter name=&quot;billingPeriodForMonthly&quot; value=&quot;Dec 01, 2024 - Dec 15, 2024&quot;/&gt;
     &lt;parameter name=&quot;link&quot; value=&quot;https://manager.easyclaimsph.com&quot;/&gt;
     &lt;parameter name=&quot;statementDate&quot; value=&quot;Jan 16, 2025&quot;/&gt;
     &lt;parameter name=&quot;link2&quot; value=&quot;https://manager.easyclaimsph.com/SOA&quot;/&gt;
@@ -363,59 +365,59 @@ data.addRows(14);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'COL01')
 data.setCell(0, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(0, 3, 43466);
+data.setCell(0, 3, 39593);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'BIL01')
 data.setCell(1, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(1, 3, 24977);
+data.setCell(1, 3, 24964);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'BS01')
 data.setCell(2, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(2, 3, 17583);
+data.setCell(2, 3, 16900);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'COL02')
 data.setCell(3, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(3, 3, 10208);
+data.setCell(3, 3, 10071);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'AR01')
 data.setCell(4, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(4, 3, 9801);
+data.setCell(4, 3, 9751);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'COL03')
+data.setCell(5, 1, 'BS02')
 data.setCell(5, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(5, 3, 3075);
+data.setCell(5, 3, 3174);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'LI01')
+data.setCell(6, 1, 'COL03')
 data.setCell(6, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(6, 3, 1877);
+data.setCell(6, 3, 3074);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'LI02')
+data.setCell(7, 1, 'LI01')
 data.setCell(7, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(7, 3, 1413);
+data.setCell(7, 3, 2346);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'BS02')
+data.setCell(8, 1, 'LI02')
 data.setCell(8, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(8, 3, 119);
+data.setCell(8, 3, 1336);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'BIL03')
 data.setCell(9, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(9, 3, 90);
+data.setCell(9, 3, 107);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'BIL04')
 data.setCell(10, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(10, 3, 36);
+data.setCell(10, 3, 34);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'BIL02')
 data.setCell(11, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(11, 3, 33);
+data.setCell(11, 3, 21);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'AR02')
 data.setCell(12, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(12, 3, 20);
+data.setCell(12, 3, 17);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'AR03')
 data.setCell(13, 2, 'AutomationTesting.BillingTestSuite30th31st')
-data.setCell(13, 3, 18);
+data.setCell(13, 3, 16);
 window.suiteTableData['Billing_Day_Test_Suite']= { tableData: data, tableDiv: 'times-div-Billing_Day_Test_Suite'}
 return data;
 }
@@ -432,15 +434,6 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">BIL04(Jan 01, 2025 - Jan 15, 2025, Jan 16, 2025)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (BIL04)</span>
-                <span class="reporter-method-output">Test ID (BIL04) Passed </span>
-                <span class="reporter-method-output">Soa Date is Valid which is: Jan 16, 2025</span>
-                <span class="reporter-method-output">End of Billing Module Validation</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
               <span class="reporter-method-name">AR01(Jan 16, 2025, H10015407)</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Start of Test ID (AR01)</span>
@@ -448,51 +441,6 @@ return data;
                 <span class="reporter-method-output">Start of Account Receivable Module Validation...</span>
                 <span class="reporter-method-output">Test ID (AR01) Passed </span>
                 <span class="reporter-method-output">Statement Date is correct which is: Jan 16, 2025</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">BIL02(Jan 16, 2025)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (BIL02)</span>
-                <span class="reporter-method-output">Test ID (BIL02) Passed </span>
-                <span class="reporter-method-output">Billing Date is Valid which is: Jan 16, 2025</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">BIL03</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (BIL03)</span>
-                <span class="reporter-method-output">Total Amount is: Php 150.00</span>
-                <span class="reporter-method-output">Test ID (BIL03) Passed </span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Billing Module Validation...</span>
-                <span class="reporter-method-output">Navigate to Billing Module...</span>
-                <span class="reporter-method-output">Kebab Icon successfully clicked</span>
-                <span class="reporter-method-output">Navigating to Hospital...</span>
-                <span class="reporter-method-output">Start of Test ID (BIL01)</span>
-                <span class="reporter-method-output">Test ID (BIL01) Passed </span>
-                <span class="reporter-method-output">Billing Period is Valid which is: Jan 01, 2025 - Jan 15, 2025</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">AR02(Jan 01, 2025 - Jan 15, 2025)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (AR02)</span>
-                <span class="reporter-method-output">Test ID (AR02) Passed </span>
-                <span class="reporter-method-output">Billing Period is correct which is: Jan 01, 2025 - Jan 15, 2025</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">LI02</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (LI02)</span>
-                <span class="reporter-method-output">Inputting Valid Credential</span>
-                <span class="reporter-method-output">Test ID (LI02) Passed </span>
-                <span class="reporter-method-output">End of Login Validation!</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -505,37 +453,20 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">COL02(Jan 01, 2025 - Jan 15, 2025)</span>
+              <span class="reporter-method-name">BIL04(Jan 01, 2025 - Jan 15, 2025, Jan 16, 2025)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (COL02)</span>
-                <span class="reporter-method-output">Test ID (COL02) Passed </span>
-                <span class="reporter-method-output">Billing Period is Valid which is: JAN 01, 2025 - JAN 15, 2025</span>
+                <span class="reporter-method-output">Start of Test ID (BIL04)</span>
+                <span class="reporter-method-output">Test ID (BIL04) Passed </span>
+                <span class="reporter-method-output">Soa Date is Valid which is: Jan 16, 2025</span>
+                <span class="reporter-method-output">End of Billing Module Validation</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">BS02</span>
+              <span class="reporter-method-name">AR02(Jan 01, 2025 - Jan 15, 2025)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (BS02)</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">LI01(https://manager.easyclaimsph.com)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Login Validation...)</span>
-                <span class="reporter-method-output">Start of Test ID (LI01)</span>
-                <span class="reporter-method-output">Navigating to URL...</span>
-                <span class="reporter-method-output">All Elements are loaded!</span>
-                <span class="reporter-method-output">Test ID (LI01) Passed </span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">AR03</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Start of Test ID (AR03)</span>
-                <span class="reporter-method-output">Test ID (AR03) Passed </span>
-                <span class="reporter-method-output">Total Amount in Billing : Php 150.00</span>
-                <span class="reporter-method-output">Total Amount in Account Receivable: Php 150.00</span>
-                <span class="reporter-method-output">End of Account Receivable Validation Php 150.00</span>
+                <span class="reporter-method-output">Start of Test ID (AR02)</span>
+                <span class="reporter-method-output">Test ID (AR02) Passed </span>
+                <span class="reporter-method-output">Billing Period is correct which is: Jan 01, 2025 - Jan 15, 2025</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -549,18 +480,90 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
+              <span class="reporter-method-name">LI02</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Test ID (LI02)</span>
+                <span class="reporter-method-output">Inputting Valid Credential</span>
+                <span class="reporter-method-output">Test ID (LI02) Passed </span>
+                <span class="reporter-method-output">End of Login Validation!</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">BS02</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Test ID (BS02)</span>
+                <span class="reporter-method-output">Test ID (BS02) Passed </span>
+                <span class="reporter-method-output">Has Billing</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Billing Module Validation...</span>
+                <span class="reporter-method-output">Navigate to Billing Module...</span>
+                <span class="reporter-method-output">Kebab Icon successfully clicked</span>
+                <span class="reporter-method-output">Navigating to Hospital...</span>
+                <span class="reporter-method-output">Start of Test ID (BIL01)</span>
+                <span class="reporter-method-output">Test ID (BIL01) Passed </span>
+                <span class="reporter-method-output">Billing Period is Valid which is: Jan 01, 2025 - Jan 15, 2025</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">LI01(https://manager.easyclaimsph.com)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Login Validation...)</span>
+                <span class="reporter-method-output">Start of Test ID (LI01)</span>
+                <span class="reporter-method-output">Navigating to URL...</span>
+                <span class="reporter-method-output">All Elements are loaded!</span>
+                <span class="reporter-method-output">Test ID (LI01) Passed </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">BIL03</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Test ID (BIL03)</span>
+                <span class="reporter-method-output">Total Amount is: Php 150.00</span>
+                <span class="reporter-method-output">Test ID (BIL03) Passed </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">COL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Jan 16, 2025)</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Start of Test ID (COL01)</span>
                 <span class="reporter-method-output">Start of Collection Module Validation...</span>
                 <span class="reporter-method-output">Navigate to Collection Module...</span>
-                <span class="reporter-method-output">'Unlock' button found. Clicking to unlock...</span>
                 <span class="reporter-method-output">'Details' button found. Clicking to proceed...</span>
                 <span class="reporter-method-output">Successfully clicked 'Details' button. Proceeding to the new tab...</span>
                 <span class="reporter-method-output">Test ID (COL01) Passed </span>
                 <span class="reporter-method-output">Billing Period is Valid which is: Jan 01, 2025 - Jan 15, 2025</span>
                 <span class="reporter-method-output">Total Claims is Valid which is: 15</span>
                 <span class="reporter-method-output">Total Amount is Valid which is: PHP 150.00</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AR03</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Test ID (AR03)</span>
+                <span class="reporter-method-output">Test ID (AR03) Passed </span>
+                <span class="reporter-method-output">Total Amount in Billing : Php 150.00</span>
+                <span class="reporter-method-output">Total Amount in Account Receivable: Php 150.00</span>
+                <span class="reporter-method-output">End of Account Receivable Validation Php 150.00</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">BIL02(Jan 16, 2025)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Test ID (BIL02)</span>
+                <span class="reporter-method-output">Test ID (BIL02) Passed </span>
+                <span class="reporter-method-output">Billing Date is Valid which is: Jan 16, 2025</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">COL02(Jan 01, 2025 - Jan 15, 2025)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Start of Test ID (COL02)</span>
+                <span class="reporter-method-output">Test ID (COL02) Passed </span>
+                <span class="reporter-method-output">Billing Period is Valid which is: JAN 01, 2025 - JAN 15, 2025</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -585,63 +588,63 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">LI01(https://manager.easyclaimsph.com)</span>
-                <span class="method-start">2830 ms</span>
+                <span class="method-start">1405 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">LI02</span>
-                <span class="method-start">4712 ms</span>
+                <span class="method-start">3754 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407)</span>
-                <span class="method-start">6128 ms</span>
+                <span class="method-name">BIL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024)</span>
+                <span class="method-start">5092 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">BIL02(Jan 16, 2025)</span>
-                <span class="method-start">31106 ms</span>
+                <span class="method-start">30057 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">BIL03</span>
-                <span class="method-start">31142 ms</span>
+                <span class="method-start">30079 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">BIL04(Jan 01, 2025 - Jan 15, 2025, Jan 16, 2025)</span>
-                <span class="method-start">31234 ms</span>
+                <span class="method-start">30187 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">COL01(Jan 01, 2025 - Jan 15, 2025, H10015407, Jan 16, 2025)</span>
-                <span class="method-start">31271 ms</span>
+                <span class="method-start">30223 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">COL02(Jan 01, 2025 - Jan 15, 2025)</span>
-                <span class="method-start">74738 ms</span>
+                <span class="method-start">69817 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">COL03</span>
-                <span class="method-start">84947 ms</span>
+                <span class="method-start">79889 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">AR01(Jan 16, 2025, H10015407)</span>
-                <span class="method-start">88023 ms</span>
+                <span class="method-start">82964 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">AR02(Jan 01, 2025 - Jan 15, 2025)</span>
-                <span class="method-start">97826 ms</span>
+                <span class="method-start">92717 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">AR03</span>
-                <span class="method-start">97848 ms</span>
+                <span class="method-start">92735 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">BS01(Dec 31, 2024, H10015407)</span>
-                <span class="method-start">97867 ms</span>
+                <span class="method-start">92752 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">BS02</span>
-                <span class="method-start">115451 ms</span>
+                <span class="method-start">109653 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">115571 ms</span>
+                <span class="method-start">112828 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
