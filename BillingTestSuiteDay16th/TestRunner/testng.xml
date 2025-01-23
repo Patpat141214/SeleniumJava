@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >                                                                                                             
-<suite parallel="false" name="Billing Day Test Suite">
+<suite parallel="false" name="BillingTest Suite">
 
-  <test name="Billing Semi Monthly" preserve-order="true">
-    <parameter name="billingPeriodForMonthly" value="Dec 01, 2024 - Dec 15, 2024" />
-    <parameter name="billingPeriodForMonthly1" value="Dec 16, 2024 - Dec 31, 2024" />
-     <parameter name="billingPeriod" value="Jan 01, 2025 - Jan 15, 2025" />
-    <parameter name="billingDate" value="Jan 16, 2025" />
-    <parameter name="expectedSoaDate" value="Jan 16, 2025" />
-        <parameter name="statementDate" value="Jan 16, 2025" />
-        <parameter name="link" value="https://manager.easyclaimsph.com" />
+<!-- Semi Monthly Monthly Billing Test Validation -->
+  <test name="Billing Test Suite Semi-Monthly" enabled="true" preserve-order="true">
+    <parameter name="billingPeriodForMonthly" value="Dec 01, 2024 - Dec 15, 2024" /> <!-- for monthly billing validation -->
+    <parameter name="billingPeriodForMonthly1" value="Dec 16, 2024 - Dec 31, 2024" /> <!-- for monthly billing validation -->
+     <parameter name="billingPeriod" value="Jan 01, 2025 - Jan 15, 2025" /> <!-- change only if necessary -->
+    <parameter name="billingDate" value="Jan 16, 2025" /> <!-- billing date should be 16 if billing period is  1-15, and 1st day if billing period is 16-end of month -->
+    <parameter name="expectedSoaDate" value="Jan 16, 2025" /> <!-- SOA date should be 16 if billing period is  1-15, and last day of the month if billing period is 16-end of month -->
+        <parameter name="statementDate" value="Jan 16, 2025" /> <!-- Statement date should be 16 if billing period is  1-15, and last day of the month if billing period is 16-end of month -->
+        <parameter name="link" value="https://manager.easyclaimsph.com" /> 
         <parameter name="link2" value="https://manager.easyclaimsph.com/SOA" /> 
-        <parameter name="Hospital" value="H10015407" /> 
-        <parameter name="billingStatement" value="Dec 31, 2024" /> 
-        
+        <parameter name="Hospital" value="H10015407" />  <!-- hospital PAN-->
+        <parameter name="billingStatement" value="Dec 31, 2024" /> <!-- for monthly billing validation -->        
     <classes>
-      <class name="AutomationTesting.BillingTestSuite30th31st"/>
+      <class name="AutomationTesting.BillingTestSuite16th"/>   
     </classes>
   </test> <!-- Test -->
- 
+  
+  <!-- Monthly Monthly Billing Test Validation -->
+  <test name="Billing Test Suite Monthly" enabled="false" preserve-order="true">
+     <parameter name="billingPeriodForMonthly" value="Dec 01, 2024 - Dec 15, 2024" /> <!-- for monthly billing validation -->
+    <parameter name="billingPeriodForMonthly1" value="Dec 16, 2024 - Dec 31, 2024" /> <!-- for monthly billing validation -->
+     <parameter name="billingPeriod" value="Jan 01, 2025 - Jan 15, 2025" /> <!-- change only if necessary -->
+    <parameter name="billingDate" value="Jan 16, 2025" /> <!-- billing date should be 16 if billing period is  1-15, and 1st day if billing period is 16-end of month -->
+    <parameter name="expectedSoaDate" value="Jan 16, 2025" /> <!-- SOA date should be 16 if billing period is  1-15, and last day of the month if billing period is 16-end of month -->
+        <parameter name="statementDate" value="Jan 16, 2025" /> <!-- Statement date should be 16 if billing period is  1-15, and last day of the month if billing period is 16-end of month -->
+        <parameter name="link" value="https://manager.easyclaimsph.com" /> 
+        <parameter name="link2" value="https://manager.easyclaimsph.com/SOA" /> 
+        <parameter name="Hospital" value="H10015407" />  <!-- hospital PAN-->
+        <parameter name="billingStatement" value="Dec 31, 2024" /> <!-- for monthly billing validation -->
+        <classes>
+               <class name="AutomationTesting.BillingTestSuite30th31st"/>
+        </classes>
+    </test>
 
 </suite> <!-- Suite -->

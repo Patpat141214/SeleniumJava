@@ -3,8 +3,10 @@
 <suite name="Failed suite [Billing Day Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Billing Semi Monthly(failed)">
     <parameter name="billingStatement" value="Dec 31, 2024"/>
+    <parameter name="billingPeriodForMonthly1" value="Dec 16, 2024 - Dec 31, 2024"/>
     <parameter name="billingDate" value="Jan 16, 2025"/>
     <parameter name="billingPeriod" value="Jan 01, 2025 - Jan 15, 2025"/>
+    <parameter name="billingPeriodForMonthly" value="Dec 01, 2024 - Dec 15, 2024"/>
     <parameter name="link" value="https://manager.easyclaimsph.com"/>
     <parameter name="statementDate" value="Jan 16, 2025"/>
     <parameter name="link2" value="https://manager.easyclaimsph.com/SOA"/>
@@ -14,9 +16,41 @@
       <class name="AutomationTesting.BillingTestSuite30th31st">
         <methods>
           <include name="tearDown"/>
-          <include name="AR01" invocation-numbers="0"/>
-          <include name="BS01" invocation-numbers="0"/>
+          <include name="SOA15" invocation-numbers="0"/>
+          <include name="SOA14"/>
+          <include name="SOA13"/>
           <include name="setUp"/>
+          <include name="SOA12"/>
+          <include name="SOA11"/>
+          <include name="COL01" invocation-numbers="0"/>
+          <include name="SOA10"/>
+          <include name="COL02" invocation-numbers="0"/>
+          <include name="COL03"/>
+          <include name="CL01" invocation-numbers="0"/>
+          <include name="SOA5" invocation-numbers="0"/>
+          <include name="AR03"/>
+          <include name="AR02" invocation-numbers="0"/>
+          <include name="BIL04" invocation-numbers="0"/>
+          <include name="AR01" invocation-numbers="0"/>
+          <include name="BIL01" invocation-numbers="0"/>
+          <include name="BIL03"/>
+          <include name="BIL02" invocation-numbers="0"/>
+          <include name="LI02"/>
+          <include name="LI01" invocation-numbers="0"/>
+          <include name="SOA02" invocation-numbers="0"/>
+          <include name="SOA01" invocation-numbers="0"/>
+          <include name="SOA9"/>
+          <include name="SOA8"/>
+          <include name="SOA7"/>
+          <include name="SOA6"/>
+          <include name="BS06"/>
+          <include name="SOA4" invocation-numbers="0"/>
+          <include name="BS04"/>
+          <include name="SOA3"/>
+          <include name="BS05"/>
+          <include name="BS02"/>
+          <include name="BS03" invocation-numbers="0"/>
+          <include name="BS01" invocation-numbers="0"/>
         </methods>
       </class> <!-- AutomationTesting.BillingTestSuite30th31st -->
     </classes>
