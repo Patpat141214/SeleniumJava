@@ -1,0 +1,595 @@
+<html>
+<head>
+<title>TestNG:  Billing Test Suite Monthly</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Billing Test Suite Monthly</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>34/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jan 23 10:29:08 GMT+08:00 2025</td>
+</tr>
+<tr><td>Total time:</td><td>162 seconds (162239 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.COL03()'><b>COL03</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1517266286" onClick='toggleBox("Output-1517266286", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1517266286" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1517266286">
+Start of Test ID (COL03)<br/>
+Test ID (COL03) Passed <br/>
+Current Balance is correct which is: Php 150.00<br/>
+End of Collection Module Validation<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.COL02()'><b>COL02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025<br/>
+<a href="#Output-903195729" onClick='toggleBox("Output-903195729", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-903195729" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-903195729">
+Start of Test ID (COL02)<br/>
+Test ID (COL02) Passed <br/>
+Billing Period is Valid which is: JAN 01, 2025 - JAN 15, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS02()'><b>BS02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-677144856" onClick='toggleBox("Output-677144856", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-677144856" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-677144856">
+Start of Test ID (BS02)<br/>
+Test ID (BS02) Passed <br/>
+Has Billing<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL03()'><b>BIL03</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-312202589" onClick='toggleBox("Output-312202589", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-312202589" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-312202589">
+Start of Test ID (BIL03)<br/>
+Total Amount is: Php 150.00<br/>
+Test ID (BIL03) Passed <br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA7()'><b>SOA7</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-879706537" onClick='toggleBox("Output-879706537", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-879706537" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-879706537">
+Start of Test ID (SOA07)<br/>
+Test ID (SOA07) Passed <br/>
+Total Claims: 15.00<br/>
+Service Fee: 10.00<br/>
+Total Claims * Service Fee: ₱ 150.00<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.COL01()'><b>COL01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025, H10015407, Jan 16, 2025<br/>
+<a href="#Output-1994249754" onClick='toggleBox("Output-1994249754", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1994249754" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1994249754">
+Start of Test ID (COL01)<br/>
+Start of Collection Module Validation...<br/>
+Navigate to Collection Module...<br/>
+'Unlock' button found. Clicking to unlock...<br/>
+'Details' button found. Clicking to proceed...<br/>
+Successfully clicked 'Details' button. Proceeding to the new tab...<br/>
+Test ID (COL01) Passed <br/>
+Billing Period is Valid which is: Jan 01, 2025 - Jan 15, 2025<br/>
+Total Claims is Valid which is: 15<br/>
+Total Amount is Valid which is: PHP 150.00<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL04()'><b>BIL04</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025, Jan 16, 2025<br/>
+<a href="#Output-1973491942" onClick='toggleBox("Output-1973491942", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1973491942" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1973491942">
+Start of Test ID (BIL04)<br/>
+Test ID (BIL04) Passed <br/>
+Soa Date is Valid which is: Jan 16, 2025<br/>
+End of Billing Module Validation<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.AR03()'><b>AR03</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-935552520" onClick='toggleBox("Output-935552520", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-935552520" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-935552520">
+Start of Test ID (AR03)<br/>
+Test ID (AR03) Passed <br/>
+Total Amount in Billing : Php 150.00<br/>
+Total Amount in Account Receivable: Php 150.00<br/>
+End of Account Receivable Validation Php 150.00<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL02()'><b>BIL02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 16, 2025<br/>
+<a href="#Output-750795985" onClick='toggleBox("Output-750795985", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-750795985" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-750795985">
+Start of Test ID (BIL02)<br/>
+Test ID (BIL02) Passed <br/>
+Billing Date is Valid which is: Jan 16, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA10()'><b>SOA10</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1045336031" onClick='toggleBox("Output-1045336031", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1045336031" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1045336031">
+Start of Test ID (SOA10)<br/>
+Test ID (SOA10) Passed <br/>
+Vatable Sales: ₱ 133.93<br/>
+Value Added Tax: ₱ 16.07<br/>
+Current Amount Due: ₱ 150.00<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA12()'><b>SOA12</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-155829656" onClick='toggleBox("Output-155829656", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-155829656" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-155829656">
+Start of Test ID (SOA12)<br/>
+Test ID (SOA12) Passed <br/>
+Total Amount Due: ₱ 2,100.00<br/>
+Total Amount Due in SOA: ₱ 2,100.00<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.AR02()'><b>AR02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025<br/>
+<a href="#Output-859985937" onClick='toggleBox("Output-859985937", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-859985937" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-859985937">
+Start of Test ID (AR02)<br/>
+Test ID (AR02) Passed <br/>
+Billing Period is correct which is: Jan 01, 2025 - Jan 15, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA01()'><b>SOA01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025, H10015407<br/>
+<a href="#Output-1681730990" onClick='toggleBox("Output-1681730990", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1681730990" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1681730990">
+Start of Test ID (SOA01)<br/>
+Navigating to Statement of Account...<br/>
+Start of Statement of Account Validation...<br/>
+Test ID (SOA01) Passed <br/>
+Billing Period is correct which is: Jan 01, 2025 - Jan 15, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA02()'><b>SOA02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 16, 2025<br/>
+<a href="#Output-886333120" onClick='toggleBox("Output-886333120", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-886333120" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-886333120">
+Start of Test ID (SOA02)<br/>
+Test ID (SOA02) Passed <br/>
+Billing Date is correct which is: Jan 16, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA4()'><b>SOA4</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025<br/>
+<a href="#Output-1190724320" onClick='toggleBox("Output-1190724320", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1190724320" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1190724320">
+Start of Test ID (SOA04)<br/>
+Successfully navigated to the report page.<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA14()'><b>SOA14</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-885459806" onClick='toggleBox("Output-885459806", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-885459806" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-885459806">
+Start of Test ID (SOA14)<br/>
+Test ID (SOA14) Passed <br/>
+Overdue: 2100.0<br/>
+Current Amount Due: 150.0<br/>
+Total Payment: (0.0)<br/>
+TAD: ₱ 2,250.00<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS05()'><b>BS05</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-704482919" onClick='toggleBox("Output-704482919", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-704482919" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-704482919">
+Start of Test ID (BS05)<br/>
+Test ID (BS05) Passed <br/>
+Registered Name: Provincial Government of Camiguin<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA13()'><b>SOA13</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1065443868" onClick='toggleBox("Output-1065443868", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1065443868" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1065443868">
+Start of Test ID (SOA13)<br/>
+Test ID (SOA13) Passed <br/>
+Total Payment: (₱ 0.00)<br/>
+Total Payment covered in generated billing: (₱ 0.00)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BIL01()'><b>BIL01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025, H10015407, Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024<br/>
+<a href="#Output-1842881670" onClick='toggleBox("Output-1842881670", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1842881670" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1842881670">
+Start of Billing Module Validation...<br/>
+Navigate to Billing Module...<br/>
+Kebab Icon successfully clicked<br/>
+Navigating to Hospital...<br/>
+Start of Test ID (BIL01)<br/>
+Test ID (BIL01) Passed <br/>
+Billing Period is Valid which is: Jan 01, 2025 - Jan 15, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA9()'><b>SOA9</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1010306008" onClick='toggleBox("Output-1010306008", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1010306008" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1010306008">
+Start of Test ID (SOA09)<br/>
+Test ID (SOA09) Passed <br/>
+Vatable Sales: 133.93<br/>
+Vatable Sales * 0.12: ₱ 16.07<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA3()'><b>SOA3</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-213095762" onClick='toggleBox("Output-213095762", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-213095762" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-213095762">
+Start of Test ID (SOA03)<br/>
+Test ID (SOA03) Passed <br/>
+Total Claims is correct which is: 15<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS01()'><b>BS01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Dec 31, 2024, H10015407<br/>
+<a href="#Output-862146308" onClick='toggleBox("Output-862146308", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-862146308" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-862146308">
+Start of Test ID (BS01)<br/>
+Navigating to Billing Statement Module...<br/>
+Start of Billing Statement Validation...<br/>
+Test ID (BS01) Passed <br/>
+Date Issued: Dec 31, 2024<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.LI01()'><b>LI01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: https://manager.easyclaimsph.com<br/>
+<a href="#Output-1818592781" onClick='toggleBox("Output-1818592781", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1818592781" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1818592781">
+Start of Login Validation...)<br/>
+Start of Test ID (LI01)<br/>
+Navigating to URL...<br/>
+All Elements are loaded!<br/>
+Test ID (LI01) Passed <br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS04()'><b>BS04</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1842476600" onClick='toggleBox("Output-1842476600", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1842476600" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1842476600">
+Start of Test ID (BS04)<br/>
+Test ID (BS04) Passed <br/>
+Vatable Sales: 125.00<br/>
+VAT: 15.00<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA6()'><b>SOA6</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-1937209374" onClick='toggleBox("Output-1937209374", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1937209374" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1937209374">
+Start of Test ID (SOA06)<br/>
+Test ID (SOA06) Passed <br/>
+Total of Free trial claims: 0.0<br/>
+Total Claims without free trial: 15.0<br/>
+Total Claims that deducted free trial: 15<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS06()'><b>BS06</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-306016343" onClick='toggleBox("Output-306016343", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-306016343" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-306016343">
+Start of Test ID (BS06)<br/>
+Test ID (BS05) Passed <br/>
+Signatory: Mr./Ms. Magnolia A, Naman<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA11()'><b>SOA11</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-982565180" onClick='toggleBox("Output-982565180", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-982565180" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-982565180">
+Start of Test ID (SOA11)<br/>
+Test ID (SOA11) Passed <br/>
+Current Balance in Payment History ₱ 0.00<br/>
+Total amount in Periodical History: (₱ 0.00)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.LI02()'><b>LI02</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-737085888" onClick='toggleBox("Output-737085888", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-737085888" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-737085888">
+Start of Test ID (LI02)<br/>
+Inputting Valid Credential<br/>
+Test ID (LI02) Passed <br/>
+End of Login Validation!<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA5()'><b>SOA5</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 01, 2025 - Jan 15, 2025<br/>
+<a href="#Output-1177903557" onClick='toggleBox("Output-1177903557", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1177903557" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1177903557">
+Start of Test ID (SOA05)<br/>
+Jan 01, 2025 - Jan 15, 2025<br/>
+Test ID (SOA05) Passed <br/>
+Billing Period is valid which is: Jan 01, 2025 - Jan 15, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.CL01()'><b>CL01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: H10015407<br/>
+<a href="#Output-2055288499" onClick='toggleBox("Output-2055288499", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2055288499" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2055288499">
+Getting Registered Name...<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA8()'><b>SOA8</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br/>
+<a href="#Output-823263265" onClick='toggleBox("Output-823263265", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-823263265" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-823263265">
+Start of Test ID (SOA08)<br/>
+Test ID (SOA08) Passed <br/>
+Total Amount: 150.0<br/>
+Total Amount / 1.12: ₱ 133.93<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.BS03()'><b>BS03</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Dec 01, 2024 - Dec 15, 2024, Dec 16, 2024 - Dec 31, 2024<br/>
+<a href="#Output-1603662305" onClick='toggleBox("Output-1603662305", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1603662305" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1603662305">
+Start of Test ID (BS03)<br/>
+Test ID (BS03) Passed <br/>
+Period Covered: Dec 01, 2024 - Dec 15, 2024<br/>
+Period Covered: Dec 16, 2024 - Dec 31, 2024<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.AR01()'><b>AR01</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: Jan 16, 2025, H10015407<br/>
+<a href="#Output-84915002" onClick='toggleBox("Output-84915002", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-84915002" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-84915002">
+Start of Test ID (AR01)<br/>
+Navigating to Account Receivable Module...<br/>
+Start of Account Receivable Module Validation...<br/>
+Test ID (AR01) Passed <br/>
+Statement Date is correct which is: Jan 16, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+<tr>
+<td title='AutomationTesting.BillingTestSuite30th31st.SOA15()'><b>SOA15</b><br>Test class: AutomationTesting.BillingTestSuite30th31st<br>Parameters: https://manager.easyclaimsph.com/SOA, H10015407, Jan 01, 2025 - Jan 15, 2025, Jan 16, 2025<br/>
+<a href="#Output-1623287356" onClick='toggleBox("Output-1623287356", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1623287356" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1623287356">
+Start of Test ID (SOA15)<br/>
+Test ID (SOA15) Passed <br/>
+Total Claims: 15<br/>
+Billing Period: Jan 01, 2025 - Jan 15, 2025<br/>
+Statement Date: Jan 16, 2025<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>AutomationTesting.BillingTestSuite30th31st@4116aac9</td></tr>
+</table><p>
+</body>
+</html>
